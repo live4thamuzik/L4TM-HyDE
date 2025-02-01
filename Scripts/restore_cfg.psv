@@ -69,7 +69,8 @@ P|${HOME}/.config/kitty|kitty.conf|kitty
 P|${HOME}/.config|fish|fish
 P|${HOME}|.zshrc .hyde.zshrc .p10k.zsh|zsh zsh-theme-powerlevel10k pokego-bin
 S|${HOME}|.zshenv|zsh zsh-theme-powerlevel10k
-S|${HOME}|.bashrc .bashrc
+S|${HOME}|.bashrc
+S|${HOME}/oh-my-posh
 
  File Explorer 
 P|${HOME}/.local/state|dolphinstaterc|dolphin
