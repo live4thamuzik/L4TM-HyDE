@@ -1,8 +1,8 @@
 # --------------------------------------------------- // System
-# downgrade                                            # downgrade packages
-# trash-cli-git                                        # cli to manage trash files
-# libinput-gestures                                    # actions touchpad gestures using libinput
-# gestures                                             # gui for libinput-gestures
+downgrade                                            # downgrade packages
+trash-cli-git                                        # cli to manage trash files
+libinput-gestures                                    # actions touchpad gestures using libinput
+gestures                                             # gui for libinput-gestures
 wttrbar                                                # for weather
 python-requests|wttrbar                                # script dependency
 ddccui                                                 # GUI to control brightness for external monitors
@@ -15,13 +15,13 @@ ddccui                                                 # GUI to control brightne
 
 # --------------------------------------------------- // Misc
 xdg-desktop-portal-gtk                                 # xdg desktop portal using gtk
-# emote                                                # emoji picker gtk3
+emote                                                # emoji picker gtk3
 
 # --------------------------------------------------- // Gaming
 steam                                                  # gaming platform
-gamemode                                               # daemon and library for game optimizations
+# gamemode                                               # daemon and library for game optimizations
 mangohud                                               # system performance overlay
-# gamescope                                            # micro-compositor for gaming
+gamescope-git                                            # micro-compositor for gaming
 # lutris                                               # Lutris is an open source gaming platform for Linux
 
 # --------------------------------------------------- // Music
@@ -46,7 +46,31 @@ spicetify-cli                                          # cli to customize spotif
 #electron                                              # electron backend
 
 # --------------------------------------------------- // Lockscreen
-#swaylock-effects-git                                   # swaylock with effects // very minimal lockscreen
+swaylock-effects-git                                   # swaylock with effects // very minimal lockscreen
 
 # --------------------------------------------------- // OSD
 swayosd-git                                             #A GTK based on screen display for keyboard shortcuts like caps-lock and volume
+
+# --------------------------------------------------- // L4TM's desired apps
+oh-my-posh-git                                         # Prompt themes for bash
+bluemail
+libreoffice-fresh
+musikcube
+mpv
+chromium
+brave-bin
+flatpak
+sl
+lolcat
+cmatrix
+asciiquarium
+remmina
+freerdp
+auto-cpufreq
+bazecor
+appimage-installer
+hyprshade
+noto-fonts-emoji
+openssl
+openssh
+strawberry
