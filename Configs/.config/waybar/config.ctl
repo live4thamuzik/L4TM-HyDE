@@ -22,6 +22,6 @@
 0|28|left|( custom/power custom/cliphist custom/wbar custom/theme custom/wallchange ) ( idle_inhibitor clock custom/spotify )|( wlr/taskbar )|( privacy tray ) ( backlight network pulseaudio pulseaudio#microphone )
 0|28|top|( custom/power custom/cliphist custom/wbar custom/theme custom/wallchange ) ( idle_inhibitor clock custom/spotify )|( wlr/taskbar )|( privacy tray ) ( backlight network pulseaudio pulseaudio#microphone )
 0|28|right|( custom/power custom/cliphist custom/wbar custom/theme custom/wallchange ) ( idle_inhibitor clock custom/spotify )|( wlr/taskbar )|( privacy tray ) ( backlight network pulseaudio pulseaudio#microphone )
-0|40|top|( hyprland/workspaces )|( custom/cava idle_inhibitor clock )|( backlight pulseaudio pulseaudio#microphone tray battery custom/keybindhint custom/cliphist custom/hyprsunset custom/power )
+0|40|top|( hyprland/workspaces wlr/taskbar )|( custom/cava idle_inhibitor clock custom/updates )|( backlight pulseaudio pulseaudio#microphone tray battery custom/keybindhint custom/cliphist custom/hyprsunset custom/power )
 0|30|top|( hyprland/workspaces##kanji wlr/taskbar##custom )|( keyboard-state custom/hyprsunset idle_inhibitor clock##alt custom/updates  custom/keybindhint ) | ( privacy backlight tray network custom/bluetooth pulseaudio pulseaudio#microphone battery custom/gpuinfo custom/swaync )
 0|30|bottom||( wlr/taskbar##windows )| ( privacy tray  custom/gpuinfo network pulseaudio pulseaudio#microphone battery clock )
