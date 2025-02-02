@@ -84,6 +84,7 @@ S|${HOME}/.local/share|dolphin|dolphin
 
  Input 
 P|${HOME}/.config|libinput-gestures.conf|libinput-gestures
+S|${HOME}/Dygma
 
  Wayland 
 P|${HOME}/.config|spotify-flags.conf|spotify
