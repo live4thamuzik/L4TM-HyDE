@@ -5,7 +5,14 @@ BackgroundNormal=#00000000
 TerminalApplication=kitty
 
 [Icons]
-Theme=Will be overwritten on themeswitch
+Theme=Vivid-Glassy-Dark-Icons
+
+[KDE]
+ShowDeleteCommand=false
+
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
 
 [UiSettings]
 ColorScheme=*

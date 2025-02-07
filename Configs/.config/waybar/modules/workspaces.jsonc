@@ -9,5 +9,5 @@
         "on-scroll-down": "hyprctl dispatch workspace +1",
         "persistent-workspaces": {
         }
-    },
+    },  
 

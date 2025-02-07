@@ -3,22 +3,33 @@ MenuBar=Disabled
 [$Version]
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
+[CompactMode]
+UseSystemFont=false
+ViewFont=FiraCode Nerd Font Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[DetailsMode]
+UseSystemFont=false
+ViewFont=FiraCode Nerd Font Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
 [General]
+RememberOpenedTabs=false
 ShowSelectionToggle=false
 ShowStatusBar=false
 Version=202
 ViewPropsTimestamp=2023,4,26,16,58,48.324
 
 [IconsMode]
-MaximumTextLines=1
-PreviewSize=112
+MaximumTextLines=2
+PreviewSize=176
+UseSystemFont=false
+ViewFont=FiraCode Nerd Font Mono,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [InformationPanel]
 dateFormat=ShortFormat
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
-Places Icons Static Size=16
+Places Icons Static Size=48
 
 [KPropertiesDialog]
 2560x1080 screen: Window-Maximized=true
@@ -32,11 +43,10 @@ IconSize=16
 ToolButtonStyle=IconOnly
 
 [PlacesPanel]
-IconSize=16
+IconSize=48
 
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,ffmpegthumbs
 
 [Toolbar mainToolBar]
 ToolButtonStyle=IconOnly
-

@@ -1,0 +1,5227 @@
+[2025-02-01 22:07:19.163] [debug] device.request: version
+[2025-02-01 22:07:19.163] [debug] performing request
+[2025-02-01 22:07:19.163] [warn]  EXECUTED changeCurrent:  {
+  selected: 0,
+  device: {
+    type: 'serial',
+    timeout: 5000,
+    port: {
+      _events: '[object]',
+      _readableState: '[object]',
+      _writableState: '[object]',
+      allowHalfOpen: true,
+      port: '[object]',
+      _pool: '[object]',
+      _kMinPoolSpace: 128,
+      opening: false,
+      closing: false,
+      settings: '[object]',
+      _eventsCount: 2
+    },
+    callbacks: [ '[function]' ],
+    result: '',
+    commands: { help: '[Array]' },
+    file: false,
+    isClosed: false,
+    isSending: true,
+    memoryMap: {},
+    path: '/dev/ttyACM0',
+    manufacturer: 'DYGMA',
+    serialNumber: 'A8FB4D2E3BC572B6',
+    pnpId: 'usb-DYGMA_RAISE2_A8FB4D2E3BC572B6-if00',
+    productId: '0021',
+    vendorId: '35ef',
+    device: {
+      info: '[object]',
+      usb: '[object]',
+      keyboard: '[object]',
+      keyboardUnderglow: '[object]',
+      RGBWMode: true,
+      bootloader: false,
+      wireless: true,
+      components: '[object]',
+      instructions: '[object]',
+      flash: '[function]',
+      chipId: 'a8fb4d2e3bc572b6'
+    }
+  }
+} [Circular]
+[2025-02-01 22:07:19.164] [info]  Current State:  [
+  {
+    name: 'Raise2',
+    available: true,
+    connected: false,
+    config: {
+      id: 'a8fb4d2e3bc572b6',
+      name: 'Raise2',
+      layers: '[Array]',
+      macros: '[Array]',
+      superkeys: '[Array]',
+      device: '[object]'
+    },
+    file: false,
+    device: {
+      type: 'serial',
+      timeout: 5000,
+      port: '[object]',
+      callbacks: '[Array]',
+      result: '',
+      commands: '[object]',
+      file: false,
+      isClosed: false,
+      isSending: true,
+      memoryMap: '[object]',
+      path: '/dev/ttyACM0',
+      manufacturer: 'DYGMA',
+      serialNumber: 'A8FB4D2E3BC572B6',
+      pnpId: 'usb-DYGMA_RAISE2_A8FB4D2E3BC572B6-if00',
+      productId: '0021',
+      vendorId: '35ef',
+      device: '[object]'
+    },
+    serialNumber: 'a8fb4d2e3bc572b6',
+    index: 0
+  }
+] 0
+[2025-02-01 22:07:19.166] [info]  Current State:  [
+  {
+    name: 'Raise2',
+    available: true,
+    connected: false,
+    config: {
+      id: 'a8fb4d2e3bc572b6',
+      name: 'Raise2',
+      layers: '[Array]',
+      macros: '[Array]',
+      superkeys: '[Array]',
+      device: '[object]'
+    },
+    file: false,
+    device: {
+      type: 'serial',
+      timeout: 5000,
+      port: '[object]',
+      callbacks: '[Array]',
+      result: '',
+      commands: '[object]',
+      file: false,
+      isClosed: false,
+      isSending: true,
+      memoryMap: '[object]',
+      path: '/dev/ttyACM0',
+      manufacturer: 'DYGMA',
+      serialNumber: 'A8FB4D2E3BC572B6',
+      pnpId: 'usb-DYGMA_RAISE2_A8FB4D2E3BC572B6-if00',
+      productId: '0021',
+      vendorId: '35ef',
+      device: '[object]'
+    },
+    serialNumber: 'a8fb4d2e3bc572b6',
+    index: 0
+  }
+] 0
+[2025-02-01 22:07:19.169] [debug] addport: incoming data: v1.1.1
+[2025-02-01 22:07:19.169] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.169] [verbose] VERSION:  v1.1.1
+[2025-02-01 22:07:19.182] [info]  Scanning KEYBOARD
+[2025-02-01 22:07:19.182] [debug] device.request: hardware.chip_id
+[2025-02-01 22:07:19.182] [debug] performing request
+[2025-02-01 22:07:19.194] [debug] addport: incoming data: a8fb4d2e3bc572b6 
+[2025-02-01 22:07:19.194] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.195] [info]  Neuron ID a8fb4d2e3bc572b6 1
+[2025-02-01 22:07:19.195] [info]  Final neuron {
+  id: 'a8fb4d2e3bc572b6',
+  name: 'Raise2',
+  layers: [
+    { id: 0, name: 'L1 - Default' },
+    { id: 1, name: 'L2 - Function Keys' },
+    { id: 2, name: 'L3 - Gaming' },
+    { id: 3, name: 'L4 - Caps Lock' },
+    { id: 4, name: 'L5' },
+    { id: 5, name: 'L6' },
+    { id: 6, name: 'L7' },
+    { id: 7, name: 'L8' },
+    { id: 8, name: 'L9' },
+    { id: 9, name: 'L10' }
+  ],
+  macros: [ { actions: '[Array]', name: 'Su', macro: '', id: 0 } ],
+  superkeys: [],
+  device: {
+    info: {
+      vendor: 'Dygma',
+      product: 'Raise2',
+      keyboardType: 'ANSI',
+      displayName: 'Dygma Raise 2 ANSI',
+      urls: '[Array]'
+    },
+    usb: { vendorId: 13807, productId: 33 },
+    keyboard: {
+      rows: 5,
+      columns: 16,
+      left: '[Array]',
+      right: '[Array]',
+      ledsLeft: '[Array]',
+      ledsRight: '[Array]'
+    },
+    keyboardUnderglow: { rows: 4, columns: 44, ledsLeft: '[Array]', ledsRight: '[Array]' },
+    RGBWMode: true,
+    bootloader: false,
+    wireless: true,
+    components: {},
+    instructions: { en: '[object]' },
+    chipId: 'a8fb4d2e3bc572b6'
+  }
+}
+[2025-02-01 22:07:19.195] [info]  connected to:  0
+[2025-02-01 22:07:19.198] [debug] device.request: keymap.default
+[2025-02-01 22:07:19.198] [debug] performing request
+[2025-02-01 22:07:19.205] [debug] addport: incoming data: 41 30 31 32 33 34 35 0 0 36 37 38 39 45 46 42 43 20 26 8 21 23 0 0 28 24 12 18 19 47 48 40 57 4 22 7 9 10 0 0 0 11 13 14 15 51 52 49 225 49 29 27 6 25 5 0 0 0 17 16 54 55 56 229 224 227 226 44 44 42 17152 0 54109 76 44 44 80 79 82 81 41 58 59 60 61 62 63 0 0 64 65 66 67 68 69 42 43 0 82 0 0 0 0 0 36 37 38 84 86 0 0 40 57 80 81 79 0 0 0 0 0 87 33 34 35 85 0 49 225 49 0 0 0 0 0 0 0 0 99 30 31 32 82 229 224 227 226 44 44 42 40 0 17492 76 39 44 80 81 79 228 
+[2025-02-01 22:07:19.206] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.206] [debug] device.request: keymap.custom
+[2025-02-01 22:07:19.206] [debug] performing request
+[2025-02-01 22:07:19.230] [debug] addport: incoming data: 41 30 31 32 33 34 35 0 0 36 37 38 39 45 46 42 43 20 26 8 21 23 0 0 28 24 12 18 19 47 48 49 17495 4 22 7 9 10 0 0 0 11 13 14 15 51 52 40 225 225 29 27 6 25 5 0 0 0 17 16 54 55 56 229 224 227 226 44 44 17451 17494 51770 42 76 44 44 230 231 101 53852 41 58 59 60 61 62 63 65535 65535 64 65 66 67 68 69 19682 43 2101 82 76 74 75 65535 65535 95 96 97 85 84 65535 23786 23785 22733 80 81 79 77 78 65535 65535 65535 92 93 94 87 86 23664 23663 65535 225 22711 22710 22709 65535 65535 65535 65535 65535 89 90 91 65535 17154 17152 224 227 226 65535 65535 65535 65535 65535 65535 65535 99 98 88 54108 101 54109 41 30 31 32 33 34 35 65535 65535 65535 65535 65535 65535 65535 65535 65535 43 20 26 8 21 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 4 22 7 9 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 225 65535 65535 6 25 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 224 227 226 44 44 17451 17492 65535 65535 65535 65535 65535 65535 65535 65535 65535 2101 2078 2079 2080 2081 2082 2083 0 0 2084 2085 2086 2087 2093 2094 42 43 2068 2074 2056 2069 2071 0 0 2076 2072 2060 2066 2067 2095 2096 2097 17492 2052 2070 2055 2057 2058 0 0 0 2059 2061 2062 2063 2099 2100 40 225 225 2077 2075 2054 2073 2053 0 0 0 2065 2064 2102 2103 2104 229 224 227 226 44 44 17451 17494 51770 42 76 44 44 230 231 101 53852 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 
+[2025-02-01 22:07:19.230] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.230] [debug] device.request: keymap.onlyCustom
+[2025-02-01 22:07:19.230] [debug] performing request
+[2025-02-01 22:07:19.231] [debug] addport: incoming data: 1 
+[2025-02-01 22:07:19.231] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.232] [info]  KEYMAP [
+  [
+    { keyCode: 41, label: 'ESC' },
+    { keyCode: 30, label: '1' },
+    { keyCode: 31, label: '2' },
+    { keyCode: 32, label: '3' },
+    { keyCode: 33, label: '4' },
+    { keyCode: 34, label: '5' },
+    { keyCode: 35, label: '6' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 36, label: '7' },
+    { keyCode: 37, label: '8' },
+    { keyCode: 38, label: '9' },
+    { keyCode: 39, label: '0' },
+    { keyCode: 45, label: '-' },
+    { keyCode: 46, label: '=' },
+    { keyCode: 42, label: 'BACKSPACE', verbose: 'Backspace' },
+    { keyCode: 43, label: 'TAB' },
+    { keyCode: 20, label: 'Q' },
+    { keyCode: 26, label: 'W' },
+    { keyCode: 8, label: 'E' },
+    { keyCode: 21, label: 'R' },
+    { keyCode: 23, label: 'T' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 28, label: 'Y' },
+    { keyCode: 24, label: 'U' },
+    { keyCode: 12, label: 'I' },
+    { keyCode: 18, label: 'O' },
+    { keyCode: 19, label: 'P' },
+    { keyCode: 47, label: '[' },
+    { keyCode: 48, label: ']' },
+    { keyCode: 49, label: '\\' },
+    { keyCode: 17495, label: '', extraLabel: '[object]' },
+    { keyCode: 4, label: 'A' },
+    { keyCode: 22, label: 'S' },
+    { keyCode: 7, label: 'D' },
+    { keyCode: 9, label: 'F' },
+    { keyCode: 10, label: 'G' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 11, label: 'H' },
+    { keyCode: 13, label: 'J' },
+    { keyCode: 14, label: 'K' },
+    { keyCode: 15, label: 'L' },
+    { keyCode: 51, label: ';' },
+    { keyCode: 52, label: "'" },
+    { keyCode: 40, label: 'ENTER' },
+    {
+      keyCode: 225,
+      label: 'SHIFT',
+      extraLabel: 'LEFT',
+      verbose: 'Left Shift'
+    },
+    {
+      keyCode: 225,
+      label: 'SHIFT',
+      extraLabel: 'LEFT',
+      verbose: 'Left Shift'
+    },
+    { keyCode: 29, label: 'Z' },
+    { keyCode: 27, label: 'X' },
+    { keyCode: 6, label: 'C' },
+    { keyCode: 25, label: 'V' },
+    { keyCode: 5, label: 'B' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 17, label: 'N' },
+    { keyCode: 16, label: 'M' },
+    { keyCode: 54, label: ',' },
+    { keyCode: 55, label: '.' },
+    { keyCode: 56, label: '/' },
+    {
+      keyCode: 229,
+      label: 'SHIFT',
+      extraLabel: 'RIGHT',
+      verbose: 'Right Shift'
+    },
+    {
+      keyCode: 224,
+      label: 'CTRL',
+      extraLabel: 'LEFT',
+      verbose: 'Left Control'
+    },
+    { keyCode: 227, label: 'LEFT LINUX', verbose: 'Left Linux' },
+    { keyCode: 226, label: 'LEFT ALT', verbose: 'Left Alt' },
+    { keyCode: 44, label: 'SPACE' },
+    { keyCode: 44, label: 'SPACE' },
+    { keyCode: 17451, label: '', extraLabel: '[object]' },
+    { keyCode: 17494, label: '', extraLabel: '[object]' },
+    { keyCode: 51770, label: 'ENTER', extraLabel: '[object]' },
+    { keyCode: 42, label: 'BACKSPACE', verbose: 'Backspace' },
+    { keyCode: 76, label: 'DEL' },
+    { keyCode: 44, label: 'SPACE' },
+    { keyCode: 44, label: 'SPACE' },
+    {
+      keyCode: 230,
+      label: 'RIGHT ALT',
+      extraLabel: '',
+      verbose: 'AltGr'
+    },
+    { keyCode: 231, label: 'RIGHT LINUX', verbose: 'Right Linux' },
+    { keyCode: 101, label: 'MENU' },
+    { keyCode: 53852, label: '1', extraLabel: 'MACRO' }
+  ],
+  [
+    { keyCode: 41, label: 'ESC' },
+    { keyCode: 58, label: 'F1' },
+    { keyCode: 59, label: 'F2' },
+    { keyCode: 60, label: 'F3' },
+    { keyCode: 61, label: 'F4' },
+    { keyCode: 62, label: 'F5' },
+    { keyCode: 63, label: 'F6' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    { keyCode: 64, label: 'F7' },
+    { keyCode: 65, label: 'F8' },
+    { keyCode: 66, label: 'F9' },
+    { keyCode: 67, label: 'F10' },
+    { keyCode: 68, label: 'F11' },
+    { keyCode: 69, label: 'F12' },
+    {
+      keyCode: 19682,
+      label: '[object]',
+      extraLabel: '',
+      verbose: 'Mute'
+    },
+    { keyCode: 43, label: 'TAB' },
+    { keyCode: 2101, label: '~', alt: true },
+    { keyCode: 82, label: '↑' },
+    { keyCode: 76, label: 'DEL' },
+    { keyCode: 74, label: 'HOME' },
+    { keyCode: 75, label: 'PAGE UP', verbose: 'Page Up' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    { keyCode: 95, label: '7', extraLabel: 'Num' },
+    { keyCode: 96, label: '8', extraLabel: 'Num' },
+    { keyCode: 97, label: '9', extraLabel: 'Num' },
+    { keyCode: 85, label: '*', extraLabel: 'Num' },
+    { keyCode: 84, label: '/', extraLabel: 'Num' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 23786,
+      label: '[object]',
+      extraLabel: '',
+      verbose: 'Volume down'
+    },
+    {
+      keyCode: 23785,
+      label: '[object]',
+      extraLabel: '',
+      verbose: 'Volume up'
+    },
+    {
+      keyCode: 22733,
+      label: '[object]',
+      extraLabel: '',
+      verbose: 'Play / pause'
+    },
+    { keyCode: 80, label: '←' },
+    { keyCode: 81, label: '↓' },
+    { keyCode: 79, label: '→' },
+    { keyCode: 77, label: 'END' },
+    { keyCode: 78, label: 'PAGE DOWN', verbose: 'Page Down' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    { keyCode: 92, label: '4', extraLabel: 'Num' },
+    { keyCode: 93, label: '5', extraLabel: 'Num' },
+    { keyCode: 94, label: '6', extraLabel: 'Num' },
+    { keyCode: 87, label: '+', extraLabel: 'Num' },
+    { keyCode: 86, label: '-', extraLabel: 'Num' },
+    {
+      keyCode: 23664,
+      label: '[object]',
+      extraLabel: 'Display',
+      verbose: 'Bright -'
+    },
+    {
+      keyCode: 23663,
+      label: '[object]',
+      extraLabel: 'Display',
+      verbose: 'Bright +'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 225,
+      label: 'SHIFT',
+      extraLabel: 'LEFT',
+      verbose: 'Left Shift'
+    },
+    {
+      keyCode: 22711,
+      label: '[object]',
+      extraLabel: '',
+      verbose: 'Stop'
+    },
+    {
+      keyCode: 22710,
+      label: '[object]',
+      extraLabel: '',
+      verbose: 'Prev. track'
+    },
+    {
+      keyCode: 22709,
+      label: '[object]',
+      extraLabel: '',
+      verbose: 'Next track'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    { keyCode: 89, label: '1', extraLabel: 'Num' },
+    { keyCode: 90, label: '2', extraLabel: 'Num' },
+    { keyCode: 91, label: '3', extraLabel: 'Num' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 17154,
+      label: '[object]',
+      extraLabel: 'LED',
+      verbose: 'Toggle'
+    },
+    {
+      keyCode: 17152,
+      label: '[object]',
+      extraLabel: 'LED',
+      verbose: 'Next'
+    },
+    {
+      keyCode: 224,
+      label: 'CTRL',
+      extraLabel: 'LEFT',
+      verbose: 'Left Control'
+    },
+    { keyCode: 227, label: 'LEFT LINUX', verbose: 'Left Linux' },
+    { keyCode: 226, label: 'LEFT ALT', verbose: 'Left Alt' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    { keyCode: 99, label: '.', extraLabel: 'Num' },
+    { keyCode: 98, label: '0', extraLabel: 'Num' },
+    { keyCode: 88, label: 'Enter', extraLabel: 'Num' },
+    { keyCode: 54108, label: 'LEVEL', extraLabel: 'BATT.' },
+    { keyCode: 101, label: 'MENU' },
+    { keyCode: 54109, label: 'PAIR.', extraLabel: 'BLUET.' }
+  ],
+  [
+    { keyCode: 41, label: 'ESC' },
+    { keyCode: 30, label: '1' },
+    { keyCode: 31, label: '2' },
+    { keyCode: 32, label: '3' },
+    { keyCode: 33, label: '4' },
+    { keyCode: 34, label: '5' },
+    { keyCode: 35, label: '6' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    { keyCode: 43, label: 'TAB' },
+    { keyCode: 20, label: 'Q' },
+    { keyCode: 26, label: 'W' },
+    { keyCode: 8, label: 'E' },
+    { keyCode: 21, label: 'R' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    { keyCode: 4, label: 'A' },
+    { keyCode: 22, label: 'S' },
+    { keyCode: 7, label: 'D' },
+    { keyCode: 9, label: 'F' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 225,
+      label: 'SHIFT',
+      extraLabel: 'LEFT',
+      verbose: 'Left Shift'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    { keyCode: 6, label: 'C' },
+    { keyCode: 25, label: 'V' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 224,
+      label: 'CTRL',
+      extraLabel: 'LEFT',
+      verbose: 'Left Control'
+    },
+    { keyCode: 227, label: 'LEFT LINUX', verbose: 'Left Linux' },
+    { keyCode: 226, label: 'LEFT ALT', verbose: 'Left Alt' },
+    { keyCode: 44, label: 'SPACE' },
+    { keyCode: 44, label: 'SPACE' },
+    { keyCode: 17451, label: '', extraLabel: '[object]' },
+    { keyCode: 17492, label: '', extraLabel: '[object]' },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    }
+  ],
+  [
+    { keyCode: 2101, label: '~', alt: true },
+    { keyCode: 2078, label: '!', alt: true },
+    { keyCode: 2079, label: '@', alt: true },
+    { keyCode: 2080, label: '#', alt: true },
+    { keyCode: 2081, label: '$', alt: true },
+    { keyCode: 2082, label: '%', alt: true },
+    { keyCode: 2083, label: '^', alt: true },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 2084, label: '&', alt: true },
+    { keyCode: 2085, label: '*', alt: true },
+    { keyCode: 2086, label: '(', alt: true },
+    { keyCode: 2087, label: ')', alt: true },
+    { keyCode: 2093, label: '_', alt: true },
+    { keyCode: 2094, label: '+', alt: true },
+    { keyCode: 42, label: 'BACKSPACE', verbose: 'Backspace' },
+    { keyCode: 43, label: 'TAB' },
+    { keyCode: 2068, label: 'Q', extraLabel: '' },
+    { keyCode: 2074, label: 'W', extraLabel: '' },
+    { keyCode: 2056, label: 'E', extraLabel: '' },
+    { keyCode: 2069, label: 'R', extraLabel: '' },
+    { keyCode: 2071, label: 'T', extraLabel: '' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 2076, label: 'Y', extraLabel: '' },
+    { keyCode: 2072, label: 'U', extraLabel: '' },
+    { keyCode: 2060, label: 'I', extraLabel: '' },
+    { keyCode: 2066, label: 'O', extraLabel: '' },
+    { keyCode: 2067, label: 'P', extraLabel: '' },
+    { keyCode: 2095, label: '{', alt: true },
+    { keyCode: 2096, label: '}', alt: true },
+    { keyCode: 2097, label: '|', alt: true },
+    { keyCode: 17492, label: '', extraLabel: '[object]' },
+    { keyCode: 2052, label: 'A', extraLabel: '' },
+    { keyCode: 2070, label: 'S', extraLabel: '' },
+    { keyCode: 2055, label: 'D', extraLabel: '' },
+    { keyCode: 2057, label: 'F', extraLabel: '' },
+    { keyCode: 2058, label: 'G', extraLabel: '' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 2059, label: 'H', extraLabel: '' },
+    { keyCode: 2061, label: 'J', extraLabel: '' },
+    { keyCode: 2062, label: 'K', extraLabel: '' },
+    { keyCode: 2063, label: 'L', extraLabel: '' },
+    { keyCode: 2099, label: ':', alt: true },
+    { keyCode: 2100, label: '"', alt: true },
+    { keyCode: 40, label: 'ENTER' },
+    {
+      keyCode: 225,
+      label: 'SHIFT',
+      extraLabel: 'LEFT',
+      verbose: 'Left Shift'
+    },
+    {
+      keyCode: 225,
+      label: 'SHIFT',
+      extraLabel: 'LEFT',
+      verbose: 'Left Shift'
+    },
+    { keyCode: 2077, label: 'Z', extraLabel: '' },
+    { keyCode: 2075, label: 'X', extraLabel: '' },
+    { keyCode: 2054, label: 'C', extraLabel: '' },
+    { keyCode: 2073, label: 'V', extraLabel: '' },
+    { keyCode: 2053, label: 'B', extraLabel: '' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 0, label: 'KEY', extraLabel: 'NO', verbose: 'Disabled' },
+    { keyCode: 2065, label: 'N', extraLabel: '' },
+    { keyCode: 2064, label: 'M', extraLabel: '' },
+    { keyCode: 2102, label: '<', alt: true },
+    { keyCode: 2103, label: '>', alt: true },
+    { keyCode: 2104, label: '?', alt: true },
+    {
+      keyCode: 229,
+      label: 'SHIFT',
+      extraLabel: 'RIGHT',
+      verbose: 'Right Shift'
+    },
+    {
+      keyCode: 224,
+      label: 'CTRL',
+      extraLabel: 'LEFT',
+      verbose: 'Left Control'
+    },
+    { keyCode: 227, label: 'LEFT LINUX', verbose: 'Left Linux' },
+    { keyCode: 226, label: 'LEFT ALT', verbose: 'Left Alt' },
+    { keyCode: 44, label: 'SPACE' },
+    { keyCode: 44, label: 'SPACE' },
+    { keyCode: 17451, label: '', extraLabel: '[object]' },
+    { keyCode: 17494, label: '', extraLabel: '[object]' },
+    { keyCode: 51770, label: 'ENTER', extraLabel: '[object]' },
+    { keyCode: 42, label: 'BACKSPACE', verbose: 'Backspace' },
+    { keyCode: 76, label: 'DEL' },
+    { keyCode: 44, label: 'SPACE' },
+    { keyCode: 44, label: 'SPACE' },
+    {
+      keyCode: 230,
+      label: 'RIGHT ALT',
+      extraLabel: '',
+      verbose: 'AltGr'
+    },
+    { keyCode: 231, label: 'RIGHT LINUX', verbose: 'Right Linux' },
+    { keyCode: 101, label: 'MENU' },
+    { keyCode: 53852, label: '1', extraLabel: 'MACRO' }
+  ],
+  [
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    }
+  ],
+  [
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    }
+  ],
+  [
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    }
+  ],
+  [
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    }
+  ],
+  [
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    }
+  ],
+  [
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    },
+    {
+      keyCode: 65535,
+      label: '',
+      extraLabel: 'TRANS',
+      verbose: 'Transparent'
+    }
+  ]
+]
+[2025-02-01 22:07:19.234] [debug] device.request: palette
+[2025-02-01 22:07:19.234] [debug] performing request
+[2025-02-01 22:07:19.240] [debug] addport: incoming data: 250 255 0 0 0 254 24 0 0 0 0 255 255 152 0 0 0 254 234 0 0 142 217 34 255 0 232 0 161 0 3 6 106 0 200 10 20 0 36 219 85 0 126 129 203 132 0 11 36 132 0 8 202 0 0 9 0 77 221 18 0 0 0 0 
+[2025-02-01 22:07:19.240] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.240] [debug] device.request: colormap.map
+[2025-02-01 22:07:19.240] [debug] performing request
+[2025-02-01 22:07:19.279] [debug] addport: incoming data: 13 3 3 3 3 3 3 0 5 5 5 5 5 4 5 5 5 5 5 5 1 5 5 5 5 5 4 8 4 1 1 8 0 13 6 6 3 3 3 3 6 6 6 5 5 5 5 5 1 6 6 5 5 5 5 1 6 6 6 5 5 4 3 8 4 1 1 13 13 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 7 0 0 0 0 0 0 3 1 2 7 1 2 8 2 2 2 13 2 15 3 8 8 8 15 15 5 3 5 15 15 15 15 13 0 0 0 0 0 0 4 10 15 8 8 14 14 14 4 1 8 8 14 14 14 2 2 15 14 14 14 0 3 0 1 14 4 15 15 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 1 1 1 1 1 1 4 8 5 11 0 15 15 5 5 5 8 15 15 3 15 15 4 0 15 0 1 0 5 5 8 7 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 3 0 0 0 0 0 0 6 14 14 14 14 14 8 14 14 14 14 14 5 1 14 14 14 14 14 4 8 4 1 1 8 0 7 3 3 0 0 0 0 3 3 3 14 14 14 14 14 1 3 3 14 14 14 14 1 3 3 3 14 14 4 6 8 4 1 1 7 7 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 1 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 
+[2025-02-01 22:07:19.279] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.279] [info]  PARSED PALETTE:  250 255 0 0 0 254 24 0 0 0 0 255 255 152 0 0 0 254 234 0 0 142 217 34 255 0 232 0 161 0 3 6 106 0 200 10 20 0 36 219 85 0 126 129 203 132 0 11 36 132 0 8 202 0 0 9 0 77 221 18 0 0 0 0 [
+  { r: 250, g: 255, b: 0, rgb: 'rgb(250, 255, 0)' },
+  { r: 0, g: 254, b: 24, rgb: 'rgb(0, 254, 24)' },
+  { r: 255, g: 255, b: 255, rgb: 'rgb(255, 255, 255)' },
+  { r: 255, g: 152, b: 0, rgb: 'rgb(255, 152, 0)' },
+  { r: 0, g: 254, b: 234, rgb: 'rgb(0, 254, 234)' },
+  { r: 34, g: 176, b: 251, rgb: 'rgb(34, 176, 251)' },
+  { r: 255, g: 0, b: 232, rgb: 'rgb(255, 0, 232)' },
+  { r: 167, g: 6, b: 9, rgb: 'rgb(167, 6, 9)' },
+  { r: 116, g: 10, b: 210, rgb: 'rgb(116, 10, 210)' },
+  { r: 239, g: 219, b: 255, rgb: 'rgb(239, 219, 255)' },
+  { r: 214, g: 129, b: 255, rgb: 'rgb(214, 129, 255)' },
+  { r: 214, g: 143, b: 11, rgb: 'rgb(214, 143, 11)' },
+  { r: 44, g: 140, b: 8, rgb: 'rgb(44, 140, 8)' },
+  { r: 211, g: 9, b: 9, rgb: 'rgb(211, 9, 9)' },
+  { r: 18, g: 95, b: 239, rgb: 'rgb(18, 95, 239)' },
+  { r: 0, g: 0, b: 0, rgb: 'rgb(0, 0, 0)' }
+] true
+[2025-02-01 22:07:19.280] [info]  PARSED COLORMAP:  13 3 3 3 3 3 3 0 5 5 5 5 5 4 5 5 5 5 5 5 1 5 5 5 5 5 4 8 4 1 1 8 0 13 6 6 3 3 3 3 6 6 6 5 5 5 5 5 1 6 6 5 5 5 5 1 6 6 6 5 5 4 3 8 4 1 1 13 13 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 7 0 0 0 0 0 0 3 1 2 7 1 2 8 2 2 2 13 2 15 3 8 8 8 15 15 5 3 5 15 15 15 15 13 0 0 0 0 0 0 4 10 15 8 8 14 14 14 4 1 8 8 14 14 14 2 2 15 14 14 14 0 3 0 1 14 4 15 15 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 1 1 1 1 1 1 4 8 5 11 0 15 15 5 5 5 8 15 15 3 15 15 4 0 15 0 1 0 5 5 8 7 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 3 0 0 0 0 0 0 6 14 14 14 14 14 8 14 14 14 14 14 5 1 14 14 14 14 14 4 8 4 1 1 8 0 7 3 3 0 0 0 0 3 3 3 14 14 14 14 14 1 3 3 14 14 14 14 1 3 3 3 14 14 4 6 8 4 1 1 7 7 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 1 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 176
+[2025-02-01 22:07:19.280] [debug] device.request: macros.map
+[2025-02-01 22:07:19.280] [debug] performing request
+[2025-02-01 22:07:19.330] [debug] addport: incoming data: 6 225 8 19 7 225 8 33 6 225 8 30 7 225 8 16 8 29 8 36 8 7 8 34 8 6 8 36 8 4 8 13 6 225 8 32 7 225 8 19 8 11 6 225 8 18 7 225 0 0 7 7 225 8 28 8 10 8 16 8 4 8 23 8 8 8 22 0 0 79 7 227 0 6 227 8 80 7 227 8 84 8 5 8 24 8 15 8 15 8 8 8 23 8 8 8 7 8 44 8 15 8 12 8 22 8 23 8 40 0 6 227 8 80 7 227 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 28 8 8 8 15 8 15 8 18 8 26 8 40 0 6 227 8 80 7 227 8 84 8 11 8 32 8 40 6 227 8 79 7 227 0 6 227 8 80 7 227 8 84 8 11 8 33 8 40 6 227 8 79 7 227 0 6 227 8 80 7 227 8 84 8 6 8 11 8 8 8 6 8 14 8 15 8 12 8 22 8 23 8 40 0 6 227 8 80 7 227 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 10 8 21 8 8 8 8 8 17 8 40 6 227 8 79 7 227 0 6 227 8 80 7 227 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 21 8 8 8 7 8 40 6 227 8 79 7 227 0 6 227 8 80 7 227 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 5 8 15 8 24 8 8 8 40 6 227 8 79 7 227 0 8 84 8 10 8 12 8 19 8 11 8 28 2 0 200 8 40 0 0 8 10 8 21 8 8 8 8 8 17 8 40 0 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 21 8 8 8 7 8 40 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 
+[2025-02-01 22:07:19.330] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.333] [debug] device.request: superkeys.map
+[2025-02-01 22:07:19.333] [debug] performing request
+[2025-02-01 22:07:19.349] [debug] addport: incoming data: 262 281 1 1 1 0 0 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 
+[2025-02-01 22:07:19.349] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.349] [info]  final superkeys [ { actions: [ 262, 281, 1, 1, 1 ], name: '', id: 0 } ]
+[2025-02-01 22:07:19.350] [info]  Language automatically set to:  en-US
+[2025-02-01 22:07:19.357] [info]  macros: [
+  {
+    actions: [
+      '[object]', '[object]', '[object]',
+      '[object]', '[object]', '[object]',
+      '[object]', '[object]', '[object]',
+      '[object]', '[object]', '[object]',
+      '[object]', '[object]', '[object]',
+      '[object]', '[object]', '[object]',
+      '[object]', '[object]', '[object]',
+      '[object]', '[object]', '[object]'
+    ],
+    name: 'Su',
+    macro: 'SHIFT P SHIFT 4 SHIFT 1 SHIFT M Z 7 D 5 C 7 A J SHIFT 3 SHIFT P H SHIFT O SHIFT',
+    id: 0
+  }
+]
+[2025-02-01 22:07:19.696] [debug] device.request: wireless.battery.left.level
+[2025-02-01 22:07:19.696] [debug] performing request
+[2025-02-01 22:07:19.786] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:19.786] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.786] [debug] device.request: wireless.battery.right.level
+[2025-02-01 22:07:19.786] [debug] performing request
+[2025-02-01 22:07:19.788] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:19.788] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.788] [debug] device.request: wireless.battery.left.status
+[2025-02-01 22:07:19.788] [debug] performing request
+[2025-02-01 22:07:19.789] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:19.789] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.789] [debug] device.request: wireless.battery.right.status
+[2025-02-01 22:07:19.789] [debug] performing request
+[2025-02-01 22:07:19.790] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:19.790] [debug] addport: incoming data: .
+[2025-02-01 22:07:19.790] [debug] device.request: wireless.battery.savingMode
+[2025-02-01 22:07:19.791] [debug] performing request
+[2025-02-01 22:07:19.792] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:19.792] [debug] addport: incoming data: .
+[2025-02-01 22:07:24.699] [debug] device.request: wireless.battery.left.level
+[2025-02-01 22:07:24.699] [debug] performing request
+[2025-02-01 22:07:24.706] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:24.706] [debug] addport: incoming data: .
+[2025-02-01 22:07:24.706] [debug] device.request: wireless.battery.right.level
+[2025-02-01 22:07:24.706] [debug] performing request
+[2025-02-01 22:07:24.711] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:24.711] [debug] addport: incoming data: .
+[2025-02-01 22:07:24.711] [debug] device.request: wireless.battery.left.status
+[2025-02-01 22:07:24.712] [debug] performing request
+[2025-02-01 22:07:24.717] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:24.717] [debug] addport: incoming data: .
+[2025-02-01 22:07:24.718] [debug] device.request: wireless.battery.right.status
+[2025-02-01 22:07:24.718] [debug] performing request
+[2025-02-01 22:07:24.723] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:24.724] [debug] addport: incoming data: .
+[2025-02-01 22:07:24.724] [debug] device.request: wireless.battery.savingMode
+[2025-02-01 22:07:24.724] [debug] performing request
+[2025-02-01 22:07:24.729] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:24.729] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.241] [info]  auto update value changed to: undefined
+[2025-02-01 22:07:25.243] [debug] device.request: settings.defaultLayer
+[2025-02-01 22:07:25.243] [debug] performing request
+[2025-02-01 22:07:25.270] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:25.271] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.271] [debug] device.request: led.brightness
+[2025-02-01 22:07:25.271] [debug] performing request
+[2025-02-01 22:07:25.280] [debug] addport: incoming data: 255 
+[2025-02-01 22:07:25.280] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.281] [debug] device.request: led.brightnessUG
+[2025-02-01 22:07:25.281] [debug] performing request
+[2025-02-01 22:07:25.282] [debug] addport: incoming data: 255 
+[2025-02-01 22:07:25.282] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.282] [debug] device.request: idleleds.time_limit
+[2025-02-01 22:07:25.282] [debug] performing request
+[2025-02-01 22:07:25.287] [debug] addport: incoming data: 1200 
+[2025-02-01 22:07:25.287] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.287] [debug] device.request: qukeys.holdTimeout
+[2025-02-01 22:07:25.287] [debug] performing request
+[2025-02-01 22:07:25.289] [debug] addport: incoming data: 250 
+[2025-02-01 22:07:25.289] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.289] [debug] device.request: qukeys.overlapThreshold
+[2025-02-01 22:07:25.289] [debug] performing request
+[2025-02-01 22:07:25.293] [debug] addport: incoming data: 80 
+[2025-02-01 22:07:25.293] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.294] [debug] device.request: qukeys.minimumHoldTime
+[2025-02-01 22:07:25.294] [debug] performing request
+[2025-02-01 22:07:25.295] [debug] addport: incoming data: 50 
+[2025-02-01 22:07:25.295] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.295] [debug] device.request: qukeys.minimumPriorInterval
+[2025-02-01 22:07:25.295] [debug] performing request
+[2025-02-01 22:07:25.299] [debug] addport: incoming data: 75 
+[2025-02-01 22:07:25.299] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.300] [debug] device.request: superkeys.timeout
+[2025-02-01 22:07:25.300] [debug] performing request
+[2025-02-01 22:07:25.301] [debug] addport: incoming data: 250 
+[2025-02-01 22:07:25.301] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.301] [debug] device.request: superkeys.holdstart
+[2025-02-01 22:07:25.301] [debug] performing request
+[2025-02-01 22:07:25.305] [debug] addport: incoming data: 200 
+[2025-02-01 22:07:25.305] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.306] [debug] device.request: superkeys.overlap
+[2025-02-01 22:07:25.306] [debug] performing request
+[2025-02-01 22:07:25.307] [debug] addport: incoming data: 20 
+[2025-02-01 22:07:25.307] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.307] [debug] device.request: mouse.speed
+[2025-02-01 22:07:25.308] [debug] performing request
+[2025-02-01 22:07:25.312] [debug] addport: incoming data: 20 
+[2025-02-01 22:07:25.312] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.312] [debug] device.request: mouse.accelSpeed
+[2025-02-01 22:07:25.312] [debug] performing request
+[2025-02-01 22:07:25.316] [debug] addport: incoming data: 20 
+[2025-02-01 22:07:25.316] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.317] [debug] device.request: mouse.wheelSpeed
+[2025-02-01 22:07:25.317] [debug] performing request
+[2025-02-01 22:07:25.318] [debug] addport: incoming data: 2 
+[2025-02-01 22:07:25.318] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.318] [debug] device.request: mouse.speedLimit
+[2025-02-01 22:07:25.318] [debug] performing request
+[2025-02-01 22:07:25.322] [debug] addport: incoming data: 127 
+[2025-02-01 22:07:25.322] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.323] [debug] device.request: led.brightness.wireless
+[2025-02-01 22:07:25.323] [debug] performing request
+[2025-02-01 22:07:25.328] [debug] addport: incoming data: 63 
+[2025-02-01 22:07:25.329] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.329] [debug] device.request: led.brightnessUG.wireless
+[2025-02-01 22:07:25.329] [debug] performing request
+[2025-02-01 22:07:25.330] [debug] addport: incoming data: 63 
+[2025-02-01 22:07:25.330] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.331] [debug] device.request: led.fade
+[2025-02-01 22:07:25.331] [debug] performing request
+[2025-02-01 22:07:25.335] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:25.335] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.335] [debug] device.request: idleleds.wireless
+[2025-02-01 22:07:25.335] [debug] performing request
+[2025-02-01 22:07:25.336] [debug] addport: incoming data: 300 
+[2025-02-01 22:07:25.336] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.337] [debug] device.request: idleleds.true_sleep
+[2025-02-01 22:07:25.337] [debug] performing request
+[2025-02-01 22:07:25.341] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:25.341] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.341] [debug] device.request: idleleds.true_sleep_time
+[2025-02-01 22:07:25.341] [debug] performing request
+[2025-02-01 22:07:25.342] [debug] addport: incoming data: 600 
+[2025-02-01 22:07:25.343] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.343] [debug] device.request: wireless.bluetooth.infoChannel 1
+[2025-02-01 22:07:25.343] [debug] performing request
+[2025-02-01 22:07:25.347] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.347] [debug] device.request: wireless.bluetooth.infoChannel 2
+[2025-02-01 22:07:25.348] [debug] performing request
+[2025-02-01 22:07:25.349] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.349] [debug] device.request: wireless.bluetooth.infoChannel 3
+[2025-02-01 22:07:25.349] [debug] performing request
+[2025-02-01 22:07:25.353] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.354] [debug] device.request: wireless.bluetooth.infoChannel 4
+[2025-02-01 22:07:25.354] [debug] performing request
+[2025-02-01 22:07:25.355] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.355] [debug] device.request: wireless.bluetooth.infoChannel 5
+[2025-02-01 22:07:25.355] [debug] performing request
+[2025-02-01 22:07:25.360] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.360] [debug] device.request: wireless.bluetooth.deviceName
+[2025-02-01 22:07:25.360] [debug] performing request
+[2025-02-01 22:07:25.361] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.361] [debug] device.request: wireless.rf.channelHop
+[2025-02-01 22:07:25.362] [debug] performing request
+[2025-02-01 22:07:25.366] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:25.366] [debug] addport: incoming data: .
+[2025-02-01 22:07:25.366] [debug] device.request: wireless.rf.power
+[2025-02-01 22:07:25.366] [debug] performing request
+[2025-02-01 22:07:25.367] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:25.368] [debug] addport: incoming data: .
+[2025-02-01 22:07:27.371] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 255,
+  ledBrightnessUG: 255,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:29.212] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 117.3,
+  ledBrightnessUG: 255,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:30.374] [debug] device.request: wireless.battery.left.level
+[2025-02-01 22:07:30.374] [debug] performing request
+[2025-02-01 22:07:30.375] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:30.376] [debug] addport: incoming data: .
+[2025-02-01 22:07:30.376] [debug] device.request: wireless.battery.right.level
+[2025-02-01 22:07:30.376] [debug] performing request
+[2025-02-01 22:07:30.377] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:30.377] [debug] addport: incoming data: .
+[2025-02-01 22:07:30.377] [debug] device.request: wireless.battery.left.status
+[2025-02-01 22:07:30.377] [debug] performing request
+[2025-02-01 22:07:30.379] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:30.379] [debug] addport: incoming data: .
+[2025-02-01 22:07:30.379] [debug] device.request: wireless.battery.right.status
+[2025-02-01 22:07:30.379] [debug] performing request
+[2025-02-01 22:07:30.381] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:30.381] [debug] addport: incoming data: .
+[2025-02-01 22:07:30.381] [debug] device.request: wireless.battery.savingMode
+[2025-02-01 22:07:30.381] [debug] performing request
+[2025-02-01 22:07:30.382] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:30.382] [debug] addport: incoming data: .
+[2025-02-01 22:07:30.439] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 119.85,
+  ledBrightnessUG: 255,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:30.482] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 122.4,
+  ledBrightnessUG: 255,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:30.606] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 124.95,
+  ledBrightnessUG: 255,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:31.261] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 255,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:32.740] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 117.3,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:33.364] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 119.85,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:33.612] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 122.4,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:33.787] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 124.95,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:34.720] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 127.5,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:35.374] [debug] device.request: wireless.battery.left.level
+[2025-02-01 22:07:35.374] [debug] performing request
+[2025-02-01 22:07:35.377] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:35.377] [debug] addport: incoming data: .
+[2025-02-01 22:07:35.377] [debug] device.request: wireless.battery.right.level
+[2025-02-01 22:07:35.377] [debug] performing request
+[2025-02-01 22:07:35.379] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:35.379] [debug] addport: incoming data: .
+[2025-02-01 22:07:35.379] [debug] device.request: wireless.battery.left.status
+[2025-02-01 22:07:35.379] [debug] performing request
+[2025-02-01 22:07:35.381] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:35.381] [debug] addport: incoming data: .
+[2025-02-01 22:07:35.381] [debug] device.request: wireless.battery.right.status
+[2025-02-01 22:07:35.381] [debug] performing request
+[2025-02-01 22:07:35.384] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:35.384] [debug] addport: incoming data: .
+[2025-02-01 22:07:35.385] [debug] device.request: wireless.battery.savingMode
+[2025-02-01 22:07:35.385] [debug] performing request
+[2025-02-01 22:07:35.386] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:35.386] [debug] addport: incoming data: .
+[2025-02-01 22:07:39.615] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 127.5,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:40.374] [debug] device.request: wireless.battery.left.level
+[2025-02-01 22:07:40.374] [debug] performing request
+[2025-02-01 22:07:40.375] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:40.375] [debug] addport: incoming data: .
+[2025-02-01 22:07:40.375] [debug] device.request: wireless.battery.right.level
+[2025-02-01 22:07:40.375] [debug] performing request
+[2025-02-01 22:07:40.376] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:40.377] [debug] addport: incoming data: .
+[2025-02-01 22:07:40.377] [debug] device.request: wireless.battery.left.status
+[2025-02-01 22:07:40.377] [debug] performing request
+[2025-02-01 22:07:40.378] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:40.378] [debug] addport: incoming data: .
+[2025-02-01 22:07:40.378] [debug] device.request: wireless.battery.right.status
+[2025-02-01 22:07:40.378] [debug] performing request
+[2025-02-01 22:07:40.379] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:40.379] [debug] addport: incoming data: .
+[2025-02-01 22:07:40.379] [debug] device.request: wireless.battery.savingMode
+[2025-02-01 22:07:40.379] [debug] performing request
+[2025-02-01 22:07:40.380] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:40.380] [debug] addport: incoming data: .
+[2025-02-01 22:07:42.093] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 127.5,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:44.906] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127.5,
+  ledBrightnessUG: 127.5,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:45.149] [warn]  comparison between keys true 1 1
+[2025-02-01 22:07:45.149] [warn]  comparison between keys true 0 0
+[2025-02-01 22:07:45.149] [warn]  comparison between keys false 255 127.5
+[2025-02-01 22:07:45.149] [debug] device.request: led.brightness 127.5
+[2025-02-01 22:07:45.149] [debug] performing request
+[2025-02-01 22:07:45.151] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.151] [warn]  comparison between keys false 255 127.5
+[2025-02-01 22:07:45.151] [debug] device.request: led.brightnessUG 127.5
+[2025-02-01 22:07:45.151] [debug] performing request
+[2025-02-01 22:07:45.153] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.153] [warn]  comparison between keys true 1200 1200
+[2025-02-01 22:07:45.165] [warn]  comparison between keys true 250 250
+[2025-02-01 22:07:45.165] [warn]  comparison between keys true 80 80
+[2025-02-01 22:07:45.165] [warn]  comparison between keys true 50 50
+[2025-02-01 22:07:45.165] [warn]  comparison between keys true 75 75
+[2025-02-01 22:07:45.166] [warn]  comparison between keys true 250 250
+[2025-02-01 22:07:45.166] [warn]  comparison between keys false undefined 20
+[2025-02-01 22:07:45.166] [debug] device.request: superkeys.repeat 20
+[2025-02-01 22:07:45.166] [debug] performing request
+[2025-02-01 22:07:45.168] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.168] [warn]  comparison between keys false undefined 500
+[2025-02-01 22:07:45.168] [debug] device.request: superkeys.waitfor 500
+[2025-02-01 22:07:45.168] [debug] performing request
+[2025-02-01 22:07:45.170] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.170] [warn]  comparison between keys true 200 200
+[2025-02-01 22:07:45.170] [warn]  comparison between keys true 20 20
+[2025-02-01 22:07:45.170] [warn]  comparison between keys true 20 20
+[2025-02-01 22:07:45.170] [warn]  comparison between keys false undefined 2
+[2025-02-01 22:07:45.170] [debug] device.request: mouse.speedDelay 2
+[2025-02-01 22:07:45.170] [debug] performing request
+[2025-02-01 22:07:45.171] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.171] [warn]  comparison between keys true 20 20
+[2025-02-01 22:07:45.171] [warn]  comparison between keys false undefined 2
+[2025-02-01 22:07:45.171] [debug] device.request: mouse.accelDelay 2
+[2025-02-01 22:07:45.171] [debug] performing request
+[2025-02-01 22:07:45.172] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.173] [warn]  comparison between keys true 2 2
+[2025-02-01 22:07:45.173] [warn]  comparison between keys false undefined 100
+[2025-02-01 22:07:45.173] [debug] device.request: mouse.wheelDelay 100
+[2025-02-01 22:07:45.173] [debug] performing request
+[2025-02-01 22:07:45.174] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 127 127
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 0 0
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true  
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 0 0
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 0 0
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 63 63
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 63 63
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 0 0
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 300 300
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 63 63
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 63 63
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 0 0
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 300 300
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 0 0
+[2025-02-01 22:07:45.174] [warn]  comparison between keys true 600 600
+[2025-02-01 22:07:45.174] [debug] device.request: help
+[2025-02-01 22:07:45.175] [debug] performing request
+[2025-02-01 22:07:45.176] [debug] addport: incoming data: keymap.custom
+keymap.default
+keymap.onlyCustom
+[2025-02-01 22:07:45.176] [debug] addport: incoming data: version
+hardware.layout
+hardware.wireless
+hardware.device_name
+hardware.chip_id.left
+hardware.chip_id.left_rf
+hardware.chip_id.right
+hardware.chip_id.right_rf
+[2025-02-01 22:07:45.177] [debug] addport: incoming data: settings.defaultLayer
+settings.valid?
+settings.version
+settings.crc
+[2025-02-01 22:07:45.177] [debug] addport: incoming data: eeprom.contents
+eeprom.free
+[2025-02-01 22:07:45.177] [debug] addport: incoming data: upgrade.start
+upgrade.neuron
+upgrade.end
+upgrade.keyscanner.isConnected
+upgrade.keyscanner.isBootloader
+upgrade.keyscanner.begin
+upgrade.keyscanner.isReady
+upgrade.keyscanner.getInfo
+upgrade.keyscanner.sendWrite
+upgrade.keyscanner.validate
+upgrade.keyscanner.finish
+upgrade.keyscanner.sendStart
+[2025-02-01 22:07:45.177] [debug] addport: incoming data: superkeys.map
+superkeys.waitfor
+superkeys.timeout
+superkeys.repeat
+superkeys.holdstart
+superkeys.overlap
+[2025-02-01 22:07:45.177] [debug] addport: incoming data: led.at
+led.setAll
+led.mode
+led.brightness
+led.brightnessUG
+led.brightness.wireless
+led.brightnessUG.wireless
+led.fade
+led.theme
+[2025-02-01 22:07:45.177] [debug] addport: incoming data: palette
+[2025-02-01 22:07:45.177] [debug] addport: incoming data: colormap.map
+[2025-02-01 22:07:45.177] [debug] addport: incoming data: idleleds.true_sleep
+idleleds.true_sleep_time
+idleleds.time_limit
+idleleds.wireless
+[2025-02-01 22:07:45.178] [debug] addport: incoming data: hardware.version
+hardware.side_power
+hardware.side_ver
+hardware.keyscanInterval
+hardware.firmware
+hardware.chip_id
+hardware.chip_info
+[2025-02-01 22:07:45.178] [debug] addport: incoming data: qukeys.holdTimeout
+qukeys.overlapThreshold
+qukeys.minimumHoldTime
+qukeys.minimumPriorInterval
+[2025-02-01 22:07:45.178] [debug] addport: incoming data: macros.map
+macros.trigger
+macros.memory
+[2025-02-01 22:07:45.178] [debug] addport: incoming data: help
+[2025-02-01 22:07:45.178] [debug] addport: incoming data: mouse.speed
+mouse.speedDelay
+mouse.accelSpeed
+mouse.accelDelay
+mouse.wheelSpeed
+mouse.wheelDelay
+mouse.speedLimit
+[2025-02-01 22:07:45.179] [debug] addport: incoming data: layer.activate
+layer.deactivate
+layer.isActive
+layer.moveTo
+layer.state
+[2025-02-01 22:07:45.179] [debug] addport: incoming data: wireless.battery.left.level
+wireless.battery.right.level
+wireless.battery.left.status
+wireless.battery.right.status
+wireless.battery.savingMode
+[2025-02-01 22:07:45.179] [debug] addport: incoming data: wireless.rf.power
+wireless.rf.channelHop
+wireless.rf.syncPairing
+[2025-02-01 22:07:45.179] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.180] [info]  keymap.custom
+[2025-02-01 22:07:45.180] [info]  keymap.onlyCustom
+[2025-02-01 22:07:45.180] [info]  settings.defaultLayer
+[2025-02-01 22:07:45.180] [info]  superkeys.map
+[2025-02-01 22:07:45.180] [info]  superkeys.waitfor
+[2025-02-01 22:07:45.180] [info]  superkeys.timeout
+[2025-02-01 22:07:45.180] [info]  superkeys.repeat
+[2025-02-01 22:07:45.180] [info]  superkeys.holdstart
+[2025-02-01 22:07:45.180] [info]  superkeys.overlap
+[2025-02-01 22:07:45.180] [info]  led.brightness
+[2025-02-01 22:07:45.180] [info]  led.brightnessUG
+[2025-02-01 22:07:45.180] [info]  led.brightness.wireless
+[2025-02-01 22:07:45.180] [info]  led.brightnessUG.wireless
+[2025-02-01 22:07:45.180] [info]  palette
+[2025-02-01 22:07:45.181] [info]  colormap.map
+[2025-02-01 22:07:45.181] [info]  idleleds.true_sleep
+[2025-02-01 22:07:45.181] [info]  idleleds.true_sleep_time
+[2025-02-01 22:07:45.181] [info]  idleleds.time_limit
+[2025-02-01 22:07:45.181] [info]  idleleds.wireless
+[2025-02-01 22:07:45.181] [info]  qukeys.holdTimeout
+[2025-02-01 22:07:45.181] [info]  qukeys.overlapThreshold
+[2025-02-01 22:07:45.181] [info]  qukeys.minimumHoldTime
+[2025-02-01 22:07:45.181] [info]  qukeys.minimumPriorInterval
+[2025-02-01 22:07:45.181] [info]  macros.map
+[2025-02-01 22:07:45.181] [info]  mouse.speed
+[2025-02-01 22:07:45.181] [info]  mouse.speedDelay
+[2025-02-01 22:07:45.181] [info]  mouse.accelSpeed
+[2025-02-01 22:07:45.181] [info]  mouse.accelDelay
+[2025-02-01 22:07:45.181] [info]  mouse.wheelSpeed
+[2025-02-01 22:07:45.181] [info]  mouse.wheelDelay
+[2025-02-01 22:07:45.181] [info]  mouse.speedLimit
+[2025-02-01 22:07:45.181] [info]  wireless.battery.savingMode
+[2025-02-01 22:07:45.181] [info]  wireless.rf.power
+[2025-02-01 22:07:45.181] [info]  wireless.rf.channelHop
+[2025-02-01 22:07:45.181] [info]  wireless.rf.syncPairing
+[2025-02-01 22:07:45.181] [debug] device.request: wireless.rf.syncPairing
+[2025-02-01 22:07:45.181] [debug] performing request
+[2025-02-01 22:07:45.184] [debug] addport: incoming data: .
+[2025-02-01 22:07:45.185] [info]  /home/l4tm/Dygma/Backups/Raise2/a8fb4d2e3bc572b6/20250201220745-Raise2.json /home/l4tm/Dygma/Backups/Raise2/a8fb4d2e3bc572b6 {
+  neuronID: 'a8fb4d2e3bc572b6',
+  neuron: {
+    id: 'a8fb4d2e3bc572b6',
+    name: 'Raise2',
+    layers: [
+      '[object]', '[object]',
+      '[object]', '[object]',
+      '[object]', '[object]',
+      '[object]', '[object]',
+      '[object]', '[object]'
+    ],
+    macros: [ '[object]' ],
+    superkeys: [],
+    device: {
+      info: '[object]',
+      usb: '[object]',
+      keyboard: '[object]',
+      keyboardUnderglow: '[object]',
+      RGBWMode: true,
+      bootloader: false,
+      wireless: true,
+      components: '[object]',
+      instructions: '[object]',
+      flash: '[function]',
+      chipId: 'a8fb4d2e3bc572b6'
+    }
+  },
+  versions: { bazecor: 'v1.1.1' },
+  backup: [
+    {
+      command: 'keymap.custom',
+      data: '41 30 31 32 33 34 35 0 0 36 37 38 39 45 46 42 43 20 26 8 21 23 0 0 28 24 12 18 19 47 48 49 17495 4 22 7 9 10 0 0 0 11 13 14 15 51 52 40 225 225 29 27 6 25 5 0 0 0 17 16 54 55 56 229 224 227 226 44 44 17451 17494 51770 42 76 44 44 230 231 101 53852 41 58 59 60 61 62 63 65535 65535 64 65 66 67 68 69 19682 43 2101 82 76 74 75 65535 65535 95 96 97 85 84 65535 23786 23785 22733 80 81 79 77 78 65535 65535 65535 92 93 94 87 86 23664 23663 65535 225 22711 22710 22709 65535 65535 65535 65535 65535 89 90 91 65535 17154 17152 224 227 226 65535 65535 65535 65535 65535 65535 65535 99 98 88 54108 101 54109 41 30 31 32 33 34 35 65535 65535 65535 65535 65535 65535 65535 65535 65535 43 20 26 8 21 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 4 22 7 9 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 225 65535 65535 6 25 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 224 227 226 44 44 17451 17492 65535 65535 65535 65535 65535 65535 65535 65535 65535 2101 2078 2079 2080 2081 2082 2083 0 0 2084 2085 2086 2087 2093 2094 42 43 2068 2074 2056 2069 2071 0 0 2076 2072 2060 2066 2067 2095 2096 2097 17492 2052 2070 2055 2057 2058 0 0 0 2059 2061 2062 2063 2099 2100 40 225 225 2077 2075 2054 2073 2053 0 0 0 2065 2064 2102 2103 2104 229 224 227 226 44 44 17451 17494 51770 42 76 44 44 230 231 101 53852 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535'
+    },
+    { command: 'keymap.onlyCustom', data: '1' },
+    { command: 'settings.defaultLayer', data: '0' },
+    {
+      command: 'superkeys.map',
+      data: '262 281 1 1 1 0 0 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535 65535'
+    },
+    { command: 'superkeys.waitfor', data: '500' },
+    { command: 'superkeys.timeout', data: '250' },
+    { command: 'superkeys.repeat', data: '20' },
+    { command: 'superkeys.holdstart', data: '200' },
+    { command: 'superkeys.overlap', data: '20' },
+    { command: 'led.brightness', data: '127.5' },
+    { command: 'led.brightnessUG', data: '127.5' },
+    { command: 'led.brightness.wireless', data: '63' },
+    { command: 'led.brightnessUG.wireless', data: '63' },
+    {
+      command: 'palette',
+      data: '250 255 0 0 0 254 24 0 0 0 0 255 255 152 0 0 0 254 234 0 0 142 217 34 255 0 232 0 161 0 3 6 106 0 200 10 20 0 36 219 85 0 126 129 203 132 0 11 36 132 0 8 202 0 0 9 0 77 221 18 0 0 0 0'
+    },
+    {
+      command: 'colormap.map',
+      data: '13 3 3 3 3 3 3 0 5 5 5 5 5 4 5 5 5 5 5 5 1 5 5 5 5 5 4 8 4 1 1 8 0 13 6 6 3 3 3 3 6 6 6 5 5 5 5 5 1 6 6 5 5 5 5 1 6 6 6 5 5 4 3 8 4 1 1 13 13 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 7 0 0 0 0 0 0 3 1 2 7 1 2 8 2 2 2 13 2 15 3 8 8 8 15 15 5 3 5 15 15 15 15 13 0 0 0 0 0 0 4 10 15 8 8 14 14 14 4 1 8 8 14 14 14 2 2 15 14 14 14 0 3 0 1 14 4 15 15 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 7 1 1 1 1 1 1 4 8 5 11 0 15 15 5 5 5 8 15 15 3 15 15 4 0 15 0 1 0 5 5 8 7 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 3 0 0 0 0 0 0 6 14 14 14 14 14 8 14 14 14 14 14 5 1 14 14 14 14 14 4 8 4 1 1 8 0 7 3 3 0 0 0 0 3 3 3 14 14 14 14 14 1 3 3 14 14 14 14 1 3 3 3 14 14 4 6 8 4 1 1 7 7 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 1 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15'
+    },
+    { command: 'idleleds.true_sleep', data: '0' },
+    { command: 'idleleds.true_sleep_time', data: '600' },
+    { command: 'idleleds.time_limit', data: '1200' },
+    { command: 'idleleds.wireless', data: '300' },
+    { command: 'qukeys.holdTimeout', data: '250' },
+    { command: 'qukeys.overlapThreshold', data: '80' },
+    { command: 'qukeys.minimumHoldTime', data: '50' },
+    { command: 'qukeys.minimumPriorInterval', data: '75' },
+    {
+      command: 'macros.map',
+      data: '6 225 8 19 7 225 8 33 6 225 8 30 7 225 8 16 8 29 8 36 8 7 8 34 8 6 8 36 8 4 8 13 6 225 8 32 7 225 8 19 8 11 6 225 8 18 7 225 0 0 7 7 225 8 28 8 10 8 16 8 4 8 23 8 8 8 22 0 0 79 7 227 0 6 227 8 80 7 227 8 84 8 5 8 24 8 15 8 15 8 8 8 23 8 8 8 7 8 44 8 15 8 12 8 22 8 23 8 40 0 6 227 8 80 7 227 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 28 8 8 8 15 8 15 8 18 8 26 8 40 0 6 227 8 80 7 227 8 84 8 11 8 32 8 40 6 227 8 79 7 227 0 6 227 8 80 7 227 8 84 8 11 8 33 8 40 6 227 8 79 7 227 0 6 227 8 80 7 227 8 84 8 6 8 11 8 8 8 6 8 14 8 15 8 12 8 22 8 23 8 40 0 6 227 8 80 7 227 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 10 8 21 8 8 8 8 8 17 8 40 6 227 8 79 7 227 0 6 227 8 80 7 227 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 21 8 8 8 7 8 40 6 227 8 79 7 227 0 6 227 8 80 7 227 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 5 8 15 8 24 8 8 8 40 6 227 8 79 7 227 0 8 84 8 10 8 12 8 19 8 11 8 28 2 0 200 8 40 0 0 8 10 8 21 8 8 8 8 8 17 8 40 0 8 84 8 5 8 4 8 17 8 17 8 8 8 21 8 44 8 21 8 8 8 7 8 40 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255'
+    },
+    { command: 'mouse.speed', data: '20' },
+    { command: 'mouse.speedDelay', data: '2' },
+    { command: 'mouse.accelSpeed', data: '20' },
+    { command: 'mouse.accelDelay', data: '2' },
+    { command: 'mouse.wheelSpeed', data: '2' },
+    { command: 'mouse.wheelDelay', data: '100' },
+    { command: 'mouse.speedLimit', data: '127' },
+    { command: 'wireless.battery.savingMode', data: '0' },
+    { command: 'wireless.rf.power', data: '0' },
+    { command: 'wireless.rf.channelHop', data: '0' },
+    { command: 'wireless.rf.syncPairing', data: '' }
+  ]
+}
+[2025-02-01 22:07:45.186] [info]  Creating folders
+[2025-02-01 22:07:45.186] [info]  Saving Backup to -> /home/l4tm/Dygma/Backups/Raise2/a8fb4d2e3bc572b6/20250201220745-Raise2.json
+[2025-02-01 22:07:45.187] [info]  setting wireless
+[2025-02-01 22:07:45.196] [info]  checking for changes {
+  keymap: { custom: [], default: [], onlyCustom: 1 },
+  ledBrightness: 127,
+  ledBrightnessUG: 127,
+  defaultLayer: 0,
+  ledIdleTimeLimit: 1200,
+  qukeysHoldTimeout: 250,
+  qukeysOverlapThreshold: 80,
+  qukeysMinHold: 50,
+  qukeysMinPrior: 75,
+  SuperTimeout: 250,
+  SuperRepeat: 20,
+  SuperWaitfor: 500,
+  SuperHoldstart: 200,
+  SuperOverlapThreshold: 20,
+  mouseSpeed: 20,
+  mouseSpeedDelay: 2,
+  mouseAccelSpeed: 20,
+  mouseAccelDelay: 2,
+  mouseWheelSpeed: 2,
+  mouseWheelDelay: 100,
+  mouseSpeedLimit: 127,
+  showDefaults: false
+} {
+  battery: {
+    LeftLevel: 100,
+    RightLevel: 100,
+    LeftState: 0,
+    RightState: 0,
+    savingMode: false
+  },
+  energy: { modes: 0, currentMode: 0, disable: 0 },
+  bluetooth: {
+    infoChannel1: '',
+    infoChannel2: '',
+    infoChannel3: '',
+    infoChannel4: '',
+    infoChannel5: '',
+    deviceName: ''
+  },
+  rf: { channelHop: 0, power: 0 },
+  brightness: 63,
+  brightnessUG: 63,
+  fade: 0,
+  idleleds: 300,
+  true_sleep: false,
+  true_sleep_time: 600
+}
+[2025-02-01 22:07:50.196] [debug] device.request: wireless.battery.left.level
+[2025-02-01 22:07:50.196] [debug] performing request
+[2025-02-01 22:07:50.198] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:50.198] [debug] addport: incoming data: .
+[2025-02-01 22:07:50.198] [debug] device.request: wireless.battery.right.level
+[2025-02-01 22:07:50.198] [debug] performing request
+[2025-02-01 22:07:50.200] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:50.200] [debug] addport: incoming data: .
+[2025-02-01 22:07:50.200] [debug] device.request: wireless.battery.left.status
+[2025-02-01 22:07:50.200] [debug] performing request
+[2025-02-01 22:07:50.202] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:50.202] [debug] addport: incoming data: .
+[2025-02-01 22:07:50.202] [debug] device.request: wireless.battery.right.status
+[2025-02-01 22:07:50.203] [debug] performing request
+[2025-02-01 22:07:50.204] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:50.204] [debug] addport: incoming data: .
+[2025-02-01 22:07:50.204] [debug] device.request: wireless.battery.savingMode
+[2025-02-01 22:07:50.204] [debug] performing request
+[2025-02-01 22:07:50.205] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:50.205] [debug] addport: incoming data: .
+[2025-02-01 22:07:55.196] [debug] device.request: wireless.battery.left.level
+[2025-02-01 22:07:55.196] [debug] performing request
+[2025-02-01 22:07:55.198] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:55.198] [debug] addport: incoming data: .
+[2025-02-01 22:07:55.198] [debug] device.request: wireless.battery.right.level
+[2025-02-01 22:07:55.198] [debug] performing request
+[2025-02-01 22:07:55.200] [debug] addport: incoming data: 100 
+[2025-02-01 22:07:55.200] [debug] addport: incoming data: .
+[2025-02-01 22:07:55.200] [debug] device.request: wireless.battery.left.status
+[2025-02-01 22:07:55.200] [debug] performing request
+[2025-02-01 22:07:55.202] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:55.202] [debug] addport: incoming data: .
+[2025-02-01 22:07:55.203] [debug] device.request: wireless.battery.right.status
+[2025-02-01 22:07:55.203] [debug] performing request
+[2025-02-01 22:07:55.204] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:55.204] [debug] addport: incoming data: .
+[2025-02-01 22:07:55.204] [debug] device.request: wireless.battery.savingMode
+[2025-02-01 22:07:55.204] [debug] performing request
+[2025-02-01 22:07:55.206] [debug] addport: incoming data: 0 
+[2025-02-01 22:07:55.206] [debug] addport: incoming data: .
+[2025-02-01 22:08:00.197] [debug] device.request: wireless.battery.left.level
+[2025-02-01 22:08:00.197] [debug] performing request
+[2025-02-01 22:08:00.198] [debug] addport: incoming data: 100 
+[2025-02-01 22:08:00.198] [debug] addport: incoming data: .
+[2025-02-01 22:08:00.198] [debug] device.request: wireless.battery.right.level
+[2025-02-01 22:08:00.198] [debug] performing request
+[2025-02-01 22:08:00.200] [debug] addport: incoming data: 100 
+[2025-02-01 22:08:00.200] [debug] addport: incoming data: .
+[2025-02-01 22:08:00.200] [debug] device.request: wireless.battery.left.status
+[2025-02-01 22:08:00.200] [debug] performing request
+[2025-02-01 22:08:00.201] [debug] addport: incoming data: 0 
+[2025-02-01 22:08:00.201] [debug] addport: incoming data: .
+[2025-02-01 22:08:00.201] [debug] device.request: wireless.battery.right.status
+[2025-02-01 22:08:00.201] [debug] performing request
+[2025-02-01 22:08:00.203] [debug] addport: incoming data: 0 
+[2025-02-01 22:08:00.203] [debug] addport: incoming data: .
+[2025-02-01 22:08:00.203] [debug] device.request: wireless.battery.savingMode
+[2025-02-01 22:08:00.203] [debug] performing request
+[2025-02-01 22:08:00.205] [debug] addport: incoming data: 0 
+[2025-02-01 22:08:00.205] [debug] addport: incoming data: .
+[2025-02-01 22:08:04.388] [verbose] removing USB Listeners
