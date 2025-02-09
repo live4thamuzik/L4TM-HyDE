@@ -55,7 +55,7 @@ swayosd-git                                             #A GTK based on screen d
 oh-my-posh-git                                         # Prompt themes for bash
 bluemail
 libreoffice-fresh
-musikcube
+# musikcube
 mpv
 chromium
 brave-bin
@@ -81,3 +81,4 @@ ttf-firacode-nerd
 ttf-font-awesome
 ttf-meslo-nerd
 udiskie
+etcher-bin
