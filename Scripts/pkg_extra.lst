@@ -1,11 +1,11 @@
 # --------------------------------------------------- // System
 downgrade                                            # downgrade packages
 trash-cli-git                                        # cli to manage trash files
-libinput-gestures                                    # actions touchpad gestures using libinput
-gestures                                             # gui for libinput-gestures
+# libinput-gestures                                    # actions touchpad gestures using libinput
+# gestures                                             # gui for libinput-gestures
 wttrbar                                                # for weather
 python-requests|wttrbar                                # script dependency
-ddccui                                                 # GUI to control brightness for external monitors
+ddcui                                                  # GUI to control brightness for external monitors
 # hyprgui-bin                                          # GUI for hyprland configuration // might mess your userprefs but convenient // Just disappeared
 # swappy                                               # screenshot editor, DEPRECATED in favor for satty
 
@@ -21,13 +21,13 @@ emote                                                # emoji picker gtk3
 steam                                                  # gaming platform
 # gamemode                                               # daemon and library for game optimizations
 # mangohud                                               # system performance overlay
-# gamescope-git                                            # micro-compositor for gaming
-# lutris                                               # Lutris is an open source gaming platform for Linux
+gamescope                                            # micro-compositor for gaming
+lutris                                               # Lutris is an open source gaming platform for Linux
 
 # --------------------------------------------------- // Music
 cava                                                   # audio visualizer
 spotify                                                # proprietary music streaming service
-# spicetify-cli                                          # cli to customize spotify client
+spicetify-cli                                          # cli to customize spotify client
 
 # --------------------------------------------------- // Apps
 # neovim                                               # vim based text editor
@@ -51,11 +51,9 @@ swaylock-effects-git                                   # swaylock with effects /
 # --------------------------------------------------- // OSD
 swayosd-git                                             #A GTK based on screen display for keyboard shortcuts like caps-lock and volume
 
-# --------------------------------------------------- // L4TM's desired apps
-oh-my-posh-git                                         # Prompt themes for bash
+oh-my-posh-git
 bluemail
 libreoffice-fresh
-# musikcube
 mpv
 chromium
 brave-bin
@@ -80,5 +78,5 @@ ttf-daddytime-mono-nerd
 ttf-firacode-nerd
 ttf-font-awesome
 ttf-meslo-nerd
+bat
 udiskie
-etcher-bin

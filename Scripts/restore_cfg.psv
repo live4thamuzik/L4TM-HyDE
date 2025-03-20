@@ -61,7 +61,9 @@ S|${HOME}/.config/waybar|modules config.jsonc theme.css style.css|waybar
 
  Terminal 
 P|${HOME}/.config|lsd|lsd
-S|${HOME}/.config|fastfetch|fastfetch
+P|${HOME}/.config|fastfetch|fastfetch
+O|${HOME}/.local/share/fastfetch/presets|hyde|fastfetch
+
 S|${HOME}/.config/kitty|hyde.conf theme.conf|kitty
 P|${HOME}/.config/kitty|kitty.conf|kitty
 
@@ -69,8 +71,6 @@ P|${HOME}/.config/kitty|kitty.conf|kitty
 P|${HOME}/.config|fish|fish
 P|${HOME}|.zshrc .hyde.zshrc .p10k.zsh|zsh zsh-theme-powerlevel10k pokego-bin
 S|${HOME}|.zshenv|zsh zsh-theme-powerlevel10k
-S|${HOME}|.bashrc
-S|${HOME}/oh-my-posh
 
  File Explorer 
 P|${HOME}/.local/state|dolphinstaterc|dolphin
@@ -84,7 +84,6 @@ S|${HOME}/.local/share|dolphin|dolphin
 
  Input 
 P|${HOME}/.config|libinput-gestures.conf|libinput-gestures
-S|${HOME}/Dygma
 
  Wayland 
 P|${HOME}/.config|spotify-flags.conf|spotify

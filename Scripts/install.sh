@@ -135,17 +135,17 @@ EOF
     #--------------------------------#
     # add nvidia drivers to the list #
     #--------------------------------#
-    #if nvidia_detect; then
-    #    if [ ${flg_Nvidia} -eq 1 ]; then
-    #        cat /usr/lib/modules/*/pkgbase | while read -r kernel; do
-    #            echo "${kernel}-headers" >>"${scrDir}/install_pkg.lst"
-    #        done
-    #        nvidia_detect --drivers >>"${scrDir}/install_pkg.lst"
-    #    else
-    #        print_log -warn "Nvidia" " :: " "Nvidia GPU detected but ignored..."
-    #    fi
-    #fi
-    #nvidia_detect --verbose
+#    if nvidia_detect; then
+#        if [ ${flg_Nvidia} -eq 1 ]; then
+#            cat /usr/lib/modules/*/pkgbase | while read -r kernel; do
+#                echo "${kernel}-headers" >>"${scrDir}/install_pkg.lst"
+#            done
+#            nvidia_detect --drivers >>"${scrDir}/install_pkg.lst"
+#        else
+#            print_log -warn "Nvidia" " :: " "Nvidia GPU detected but ignored..."
+#        fi
+#    fi
+#    nvidia_detect --verbose
 
     #----------------#
     # get user prefs #
@@ -181,35 +181,35 @@ EOF
         fi
     fi
 
-#    if ! chk_list "myShell" "${shlList[@]}"; then
-#        print_log -c "Shell :: "
-#        for i in "${!shlList[@]}"; do
-#            print_log -sec "$((i + 1))" " ${shlList[$i]} "
-#        done
-#        prompt_timer 120 "Enter option number [default: zsh] | q to quit "
+ #   if ! chk_list "myShell" "${shlList[@]}"; then
+ #       print_log -c "Shell :: "
+ #       for i in "${!shlList[@]}"; do
+ #           print_log -sec "$((i + 1))" " ${shlList[$i]} "
+ #       done
+ #       prompt_timer 120 "Enter option number [default: zsh] | q to quit "
 
-#        case "${PROMPT_INPUT}" in
-#        1) export myShell="zsh" ;;
-#        2) export myShell="fish" ;;
-#        q)
-#            print_log -sec "shell" -crit "Quit" "Exiting..."
-#            exit 1
-#            ;;
-#        *)
-#            print_log -sec "shell" -warn "Defaulting to zsh"
-#            export myShell="zsh"
-#            ;;
-#        esac
-#        print_log -sec "shell" -stat "Added as shell" "${myShell}"
-#        echo "${myShell}" >>"${scrDir}/install_pkg.lst"
+ #       case "${PROMPT_INPUT}" in
+ #       1) export myShell="zsh" ;;
+ #       2) export myShell="fish" ;;
+ #       q)
+ #           print_log -sec "shell" -crit "Quit" "Exiting..."
+ #           exit 1
+ #           ;;
+ #       *)
+ #           print_log -sec "shell" -warn "Defaulting to zsh"
+ #           export myShell="zsh"
+ #           ;;
+ #       esac
+ #       print_log -sec "shell" -stat "Added as shell" "${myShell}"
+ #       echo "${myShell}" >>"${scrDir}/install_pkg.lst"
 
-#        if [[ -z "$myShell" ]]; then
-#            print_log -sec "shell" -crit "No shell found..." "Log file at ${cacheDir}/logs/${HYDE_LOG}"
-#            exit 1
-#        else
-#            print_log -sec "shell" -stat "detected :: " "${myShell}"
-#        fi
-#    fi
+ #       if [[ -z "$myShell" ]]; then
+ #           print_log -sec "shell" -crit "No shell found..." "Log file at ${cacheDir}/logs/${HYDE_LOG}"
+ #           exit 1
+ #       else
+ #           print_log -sec "shell" -stat "detected :: " "${myShell}"
+ #       fi
+ #   fi
 
     if ! grep -q "^#user packages" "${scrDir}/install_pkg.lst"; then
         print_log -sec "pkg" -crit "No user packages found..." "Log file at ${cacheDir}/logs/${HYDE_LOG}/install.sh"
@@ -243,7 +243,7 @@ EOF
     "${scrDir}/restore_fnt.sh"
     "${scrDir}/restore_cfg.sh"
     "${scrDir}/restore_thm.sh"
-
+    print_log -g "[generate] " "cache ::" "Wallpapers..."
     if [ "${flg_DryRun}" -ne 1 ]; then
         "$HOME/.local/lib/hyde/swwwallcache.sh" -t ""
         "$HOME/.local/lib/hyde/themeswitch.sh" -q || true

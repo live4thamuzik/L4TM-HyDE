@@ -178,9 +178,18 @@ fi
 readonly restore_list
 
 # Get Wallpapers
-wallpapers=$(find "${Fav_Theme_Dir}" -type f \( -iname "*.gif" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \))
-wpCount="$(echo "${wallpapers}" | wc -l)"
+wallpapers=$(
+    find "${Fav_Theme_Dir}" -type f \( -iname "*.gif" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) ! -path "*/logo/*"
+)
+wpCount="$(wc -l <<<"${wallpapers}")"
 { [ -z "${wallpapers}" ] && print_prompt -r "[ERROR] " "No wallpapers found" && exit_flag=true; } || { readonly wallpapers && print_prompt -g "\n[OK] " "wallpapers :: [count] ${wpCount} (.gif+.jpg+.jpeg+.png)"; }
+
+# Get logos
+if [ -d "${Fav_Theme_Dir}/logo" ]; then
+    logos=$(find "${Fav_Theme_Dir}/logo" -type f \( -iname "*.gif" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \))
+    logosCount="$(wc -l <<<"${logos}")"
+    { [ -z "${logos}" ] && print_prompt -y "[warn] " "No logos found"; } || { readonly logos && print_prompt -g "[OK] " "logos :: [count] ${logosCount}\n"; }
+fi
 
 # parse thoroughly 😁
 check_tars() {
@@ -280,20 +289,56 @@ for prefix in "${!archive_map[@]}"; do
     tarFile="$(find "${Theme_Dir}" -type f -name "${prefix}_*.tar.*")"
     [ -f "${tarFile}" ] || continue
     tgtDir="${archive_map[$prefix]}"
-    [ -d "${tgtDir}" ] || mkdir -p "${tgtDir}"
+
+    if [[ "${tgtDir}" =~ /(usr|usr\/local)\/share/ && -d /run/current-system/sw/share/ ]]; then
+        print_prompt -y "Detected NixOS system, changing target to /run/current-system/sw/share/..."
+        tgtDir="/run/current-system/sw/share/"
+    fi
+
+    if [ ! -d "${tgtDir}" ]; then
+        if ! mkdir -p "${tgtDir}"; then
+            print_prompt -y "Creating directory as root instead..."
+            sudo mkdir -p "${tgtDir}"
+        fi
+    fi
+
     tgtChk="$(basename "$(tar -tf "${tarFile}" | cut -d '/' -f1 | sort -u)")"
-    [[ "${FULL_THEME_UPDATE}" = true ]] || { [ -d "${tgtDir[indx]}/${tgtChk}" ] && print_prompt -y "[skip] " "\"${tgtDir[indx]}/${tgtChk}\" already exists" && continue; }
+    [[ "${FULL_THEME_UPDATE}" = true ]] || { [ -d "${tgtDir}/${tgtChk}" ] && print_prompt -y "[skip] " "\"${tgtDir}/${tgtChk}\" already exists" && continue; }
     print_prompt -g "[extracting] " "${tarFile} --> ${tgtDir}"
-    tar -xf "${tarFile}" -C "${tgtDir}"
+
+    if [ -w "${tgtDir}" ]; then
+        tar -xf "${tarFile}" -C "${tgtDir}"
+    else
+        print_prompt -y "Not writable. Extracting as root: ${tgtDir}"
+        if ! sudo tar -xf "${tarFile}" -C "${tgtDir}" 2>/dev/null; then
+            print_prompt -r "Extraction by root FAILED. Giving up..."
+            print_prompt "The above error can be ignored if the '${tgtDir}' is not writable..."
+        fi
+    fi
+
 done
 
+confDir=${XDG_CONFIG_HOME:-"$HOME/.config"}
+
 # populate wallpaper
-confDir=${confDir:-"$HOME/.config"}
 Fav_Theme_Walls="${confDir}/hyde/themes/${Fav_Theme}/wallpapers"
 [ ! -d "${Fav_Theme_Walls}" ] && mkdir -p "${Fav_Theme_Walls}"
 while IFS= read -r walls; do
     cp -f "${walls}" "${Fav_Theme_Walls}"
 done <<<"${wallpapers}"
+
+# populate logos
+Fav_Theme_Logos="${confDir}/hyde/themes/${Fav_Theme}/logo"
+if [ -n "${logos}" ]; then
+    [ ! -d "${Fav_Theme_Logos}" ] && mkdir -p "${Fav_Theme_Logos}"
+    while IFS= read -r logo; do
+        if [ -f "${logo}" ]; then
+            cp -f "${logo}" "${Fav_Theme_Logos}"
+        else
+            print_prompt -y "[warn] " "${logo} --> do not exist"
+        fi
+    done <<<"${logos}"
+fi
 
 # restore configs with theme override
 echo -en "${restore_list}" >"${Theme_Dir}/restore_cfg.lst"

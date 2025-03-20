@@ -66,26 +66,26 @@ aur_available() {
     fi
 }
 
-#nvidia_detect() {
-#    readarray -t dGPU < <(lspci -k | grep -E "(VGA|3D)" | awk -F ': ' '{print $NF}')
-#    if [ "${1}" == "--verbose" ]; then
-#        for indx in "${!dGPU[@]}"; do
-#            echo -e "\033[0;32m[gpu$indx]\033[0m detected :: ${dGPU[indx]}"
-#        done
-#        return 0
-#    fi
-#    if [ "${1}" == "--drivers" ]; then
-#        while read -r -d ' ' nvcode; do
-#            awk -F '|' -v nvc="${nvcode}" 'substr(nvc,1,length($3)) == $3 {split(FILENAME,driver,"/"); print driver[length(driver)],"\nnvidia-utils"}' "${scrDir}"/nvidia-db/nvidia*dkms
-#        done <<<"${dGPU[@]}"
-#        return 0
-#    fi
-#    if grep -iq nvidia <<<"${dGPU[@]}"; then
-#        return 0
-#    else
-#        return 1
-#    fi
-#}
+nvidia_detect() {
+    readarray -t dGPU < <(lspci -k | grep -E "(VGA|3D)" | awk -F ': ' '{print $NF}')
+    if [ "${1}" == "--verbose" ]; then
+        for indx in "${!dGPU[@]}"; do
+            echo -e "\033[0;32m[gpu$indx]\033[0m detected :: ${dGPU[indx]}"
+        done
+        return 0
+    fi
+    if [ "${1}" == "--drivers" ]; then
+        while read -r -d ' ' nvcode; do
+            awk -F '|' -v nvc="${nvcode}" 'substr(nvc,1,length($3)) == $3 {split(FILENAME,driver,"/"); print driver[length(driver)],"\nnvidia-utils"}' "${scrDir}"/nvidia-db/nvidia*dkms
+        done <<<"${dGPU[@]}"
+        return 0
+    fi
+    if grep -iq nvidia <<<"${dGPU[@]}"; then
+        return 0
+    else
+        return 1
+    fi
+}
 
 prompt_timer() {
     set +e
