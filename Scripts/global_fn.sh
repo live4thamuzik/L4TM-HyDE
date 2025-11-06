@@ -69,7 +69,10 @@ aur_available() {
 
 # Source enhanced GPU detection
 # shellcheck disable=SC1091
-source "${scrDir}/gpu_detection.sh"
+# GPU detection removed from fork
+# GPU driver installation is system-level configuration
+# Should be handled by archinstall, not desktop environment setup
+# source "${scrDir}/gpu_detection.sh"
 
 prompt_timer() {
     set +e

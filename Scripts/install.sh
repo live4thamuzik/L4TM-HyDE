@@ -102,6 +102,7 @@ elif [ $OPTIND -eq 1 ]; then
     flg_Service=1
 fi
 
+
 #--------------------#
 # pre-install script #
 #--------------------#
@@ -145,24 +146,6 @@ EOF
         cat "${custom_pkg}" >>"${scrDir}/install_pkg.lst"
     fi
 
-    #--------------------------------#
-    # add gpu drivers to the list    #
-    #--------------------------------#
-    print_log -sec "GPU" -stat "detecting" "graphics hardware"
-    
-    # Detect and add GPU drivers
-    if [[ ${flg_Nvidia} -eq 1 ]]; then
-        # Add GPU drivers to package list
-        add_gpu_drivers_to_package_list "${scrDir}/install_pkg.lst" 1 1
-        print_log -sec "GPU" -stat "added" "NVIDIA and AMD drivers to package list"
-    else
-        # Only add AMD/Intel drivers (skip NVIDIA)
-        add_gpu_drivers_to_package_list "${scrDir}/install_pkg.lst" 0 1
-        print_log -sec "GPU" -stat "added" "AMD/Intel drivers (NVIDIA ignored)"
-    fi
-    
-    # Show GPU detection results
-    print_gpu_info
 
     #----------------#
     # backup configs #

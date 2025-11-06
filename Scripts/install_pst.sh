@@ -14,9 +14,51 @@ fi
 cloneDir="${cloneDir:-$CLONE_DIR}"
 flg_DryRun=${flg_DryRun:-0}
 
-# SDDM configuration removed in fork
-# Fork philosophy: System-level configuration (display manager) handled by archinstall
-# Users should configure SDDM through archinstall or manually
+# SDDM theming (keeping theming aspect - core value of fork)
+# Fork philosophy: Theming is the core value, SDDM themes are part of the theming system
+# Minimal system config needed to apply theme (theming, not infrastructure)
+if pkg_installed sddm; then
+    print_log -c "[SDDM] " -b "detected :: " "sddm"
+    if [ ! -d /etc/sddm.conf.d ]; then
+        [ ${flg_DryRun} -eq 1 ] || sudo mkdir -p /etc/sddm.conf.d
+    fi
+    if [ ! -f /etc/sddm.conf.d/backup_the_hyde_project.conf ] || [ "${HYDE_INSTALL_SDDM}" = true ]; then
+        print_log -g "[SDDM] " -b "theming :: " "Select SDDM theme:" -r "\n[1]" -b " Candy" -r "\n[2]" -b " Corners"
+        read -p " :: Enter option number (or press enter to skip): " -r sddmopt
+
+        case $sddmopt in
+        1) sddmtheme="Candy" ;;
+        2) sddmtheme="Corners" ;;
+        *) sddmtheme="" ;;
+        esac
+
+        if [[ -n "${sddmtheme}" ]] && [[ ${flg_DryRun} -ne 1 ]]; then
+            # Install theme files (theming aspect)
+            sudo tar -xzf "${cloneDir}/Source/arcs/Sddm_${sddmtheme}.tar.gz" -C /usr/share/sddm/themes/
+            # Apply theme config (minimal, just to enable the theme)
+            sudo touch /etc/sddm.conf.d/the_hyde_project.conf
+            sudo cp /etc/sddm.conf.d/the_hyde_project.conf /etc/sddm.conf.d/backup_the_hyde_project.conf
+            sudo cp /usr/share/sddm/themes/${sddmtheme}/the_hyde_project.conf /etc/sddm.conf.d/
+            print_log -g "[SDDM] " -b "theme configured :: " "${sddmtheme}"
+        elif [[ -n "${sddmtheme}" ]]; then
+            print_log -b "[dry-run] " "Would install and configure SDDM theme: ${sddmtheme}"
+        else
+            print_log -y "[SDDM] " -b "skip :: " "SDDM theme selection skipped..."
+        fi
+    else
+        print_log -y "[SDDM] " -b " :: " "SDDM is already configured..."
+    fi
+
+    # User avatar (theming aspect)
+    if [ ! -f "/usr/share/sddm/faces/${USER}.face.icon" ] && [ -f "${cloneDir}/Source/misc/${USER}.face.icon" ]; then
+        if [[ ${flg_DryRun} -ne 1 ]]; then
+            sudo cp "${cloneDir}/Source/misc/${USER}.face.icon" /usr/share/sddm/faces/
+            print_log -g "[SDDM] " -b "avatar set :: " "for ${USER}..."
+        fi
+    fi
+else
+    print_log -y "[SDDM] " -b " :: " "SDDM is not installed..."
+fi
 
 # dolphin
 if pkg_installed dolphin && pkg_installed xdg-utils; then

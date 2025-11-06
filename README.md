@@ -26,6 +26,15 @@ A personalized fork of [HyDE](https://github.com/HyDE-Project/HyDE) that keeps t
 - **Modular Hyprland** - Clean, organized config file structure
 - **Waybar Style Switcher** - 10 pre-configured visual styles with preview images
 
+## Prerequisites
+
+- **Arch Linux** base installation with system already configured
+- **GPU drivers** already installed (handled by archinstall or user)
+- User account with sudo privileges
+- Internet connection
+
+> **Note:** This fork assumes your system is already set up (including GPU drivers). It focuses on desktop environment configuration and theming, not system-level setup.
+
 ## Quick Start
 
 ```bash
