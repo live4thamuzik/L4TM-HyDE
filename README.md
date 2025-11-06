@@ -165,6 +165,7 @@ Contributions welcome! Please:
 ## Credits
 
 - Original HyDE by [prasanthrangan](https://github.com/prasanthrangan)
+- Current HyDE maintainer: [kRHYME7](https://github.com/kRHYME7)
 - L4TM-HyDE fork and enhancements by [l4tm](https://github.com/live4thamuzik)
 - Community contributions welcome
 

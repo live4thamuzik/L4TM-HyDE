@@ -177,7 +177,8 @@ All notable changes to this project will be documented in this file.
 ## [0.9.0] - Initial Fork
 
 ### Forked from
-Original HyDE by prasanthrangan
+Original HyDE by [prasanthrangan](https://github.com/prasanthrangan)
+Currently maintained by [kRHYME7](https://github.com/kRHYME7)
 
 ### Goals
 - Simplify installation and configuration
