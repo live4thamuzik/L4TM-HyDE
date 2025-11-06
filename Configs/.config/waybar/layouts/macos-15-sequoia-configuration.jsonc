@@ -1,0 +1,19 @@
+{
+    // Layout for macos-15-sequoia-configuration style
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "reload_style_on_change": true,
+    "include": [
+        "$XDG_CONFIG_HOME/waybar/includes/includes.json"
+    ],
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "battery"
+    ]
+}

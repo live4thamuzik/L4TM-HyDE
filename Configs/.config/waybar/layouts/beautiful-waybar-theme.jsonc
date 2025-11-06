@@ -1,0 +1,37 @@
+{
+    // Layout for beautiful-waybar-theme style
+    // Matches original module configuration from arch-install-kit
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "reload_style_on_change": true,
+    "include": [
+        "$XDG_CONFIG_HOME/waybar/includes/includes.json"
+    ],
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "custom/weather",
+        "custom/updates",
+        "custom/cava"
+    ],
+    "modules-center": [
+        "memory",
+        "cpu",
+        "temperature"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "battery",
+        "hyprland/language",
+        "keyboard-state",
+        "backlight",
+        "pulseaudio",
+        "network",
+        "custom/vpn",
+        "clock",
+        "custom/notification",
+        "tray"
+    ]
+}
+

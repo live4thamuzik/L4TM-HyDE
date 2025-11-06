@@ -1,0 +1,10 @@
+{
+    "custom/power": {
+        "format": "{0}",
+        "rotate": 0,
+        "tooltip": true,
+        "tooltip-format": " Logout menu",
+        "on-click": "logoutlaunch.sh 2",
+        "interval": 86400
+    }
+}

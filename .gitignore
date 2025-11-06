@@ -1,0 +1,65 @@
+# HyDE Minimal - Git Ignore File
+
+# Runtime/Cache files
+*.log
+*.cache
+*.pyc
+__pycache__/
+*.bkp
+*.backup
+
+# User-specific configurations (these should be preserved, not tracked)
+Configs/.config/hypr/userprefs.conf.user
+Configs/.config/hypr/monitors.conf.user
+Configs/.config/waybar/user-*.jsonc
+Configs/.config/waybar/user-*.css
+
+# Backup directories
+.config/cfg_backups/
+*.hyde.bkp
+
+# Package lists (generated during install)
+Scripts/install_pkg.lst
+Scripts/custom_*.lst
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Build artifacts
+*.o
+*.so
+*.a
+*.exe
+
+# Python virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Node modules (if any waybar scripts use node)
+node_modules/
+
+# Secrets and credentials
+*.key
+*.pem
+*.cert
+secrets/
+.env
+
+# System files
+Thumbs.db
+.directory
+
+# Hyde state files (user-specific)
+Configs/.local/state/hyde/*.user
+

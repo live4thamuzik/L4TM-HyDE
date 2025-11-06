@@ -1,0 +1,170 @@
+@import "theme.css";
+
+/* Note: Original theme used custom @define-color variables
+ * These have been replaced with HyDE theme variables for compatibility
+ */
+
+* {
+	text-shadow: none;
+	box-shadow: none;
+  border: none;
+  border-radius: 0;
+	font-family: "Segoe UI", "Ubuntu";
+  font-weight: 600;
+  font-size: 12.7px;
+	
+	
+}
+
+window#waybar {
+  background:  @main-bg;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: @main-fg;
+}
+
+tooltip {
+  background: @main-bg;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+tooltip label{
+  color: @main-fg;
+}
+
+#custom-os_button {
+	font-family: "JetBrainsMono Nerd Font";
+  font-size: 24px;
+	padding-left: 12px;
+	padding-right: 20px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#custom-os_button:hover {
+  background:  @wb-hvr-bg;
+	color: @main-fg;
+}
+
+#workspaces {
+  color: transparent;
+	margin-right: 1.5px;
+	margin-left: 1.5px;
+}
+#workspaces button {
+  padding: 3px;
+  color: @main-fg;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#workspaces button.active {
+	color: @main-fg;
+	border-bottom: 3px solid white;
+}
+#workspaces button.focused {
+  color: @wb-act-bg;
+}
+#workspaces button.urgent {
+	background:  rgba(255, 200, 0, 0.35);
+	border-bottom: 3px dashed @warning_color;
+	color: @warning_color;
+}
+#workspaces button:hover {
+  background: @wb-hvr-bg;
+	color: @main-fg;
+}
+
+#taskbar {
+}
+
+#taskbar button {
+	min-width: 130px;
+	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+	margin-left: 2px;
+	margin-right: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: white;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#taskbar button.active {
+	border-bottom: 3px solid white;
+  background: @wb-act-bg;
+}
+
+#taskbar button:hover {
+	border-bottom: 3px solid white;
+  background: @wb-hvr-bg;
+	color: @main-fg;
+}
+
+#cpu, #disk, #memory {
+	padding:3px;
+}
+
+#temperature {
+	color: transparent;
+	font-size: 0px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#temperature.critical {
+	padding-right: 3px;
+	color: @warning_color;
+	font-size: initial;
+	border-bottom: 3px dashed @warning_color;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#window {
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#tray{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#tray > .passive {
+	border-bottom: none;
+}
+#tray > .active {
+	border-bottom: 3px solid white;
+}
+#tray > .needs-attention {
+	border-bottom: 3px solid @warning_color;
+}
+#tray > widget {
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#tray > widget:hover {
+	background: @wb-hvr-bg;
+}
+
+#pulseaudio {
+	font-family: "JetBrainsMono Nerd Font";
+	padding-left: 3px;
+  padding-right: 3px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#pulseaudio:hover {
+ 	background: @wb-hvr-bg;
+}
+
+#network {
+	padding-left: 3px;
+  padding-right: 3px;
+}
+
+#language {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clock {
+  padding-right: 5px;
+  padding-left: 5px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#clock:hover {
+	background: @wb-hvr-bg;
+}
