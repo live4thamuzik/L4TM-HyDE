@@ -66,27 +66,31 @@ qt6-wayland                                            # wayland support in qt6
 
 # --------------------------------------------------- // Applications
 firefox                                                # browser
-kitty                                                  # terminal
-alacritty                                              # terminal emulator
+# Terminal and shell packages removed - user selects during installation
+# kitty                                                  # terminal (selected by user)
+# alacritty                                              # terminal emulator (selected by user)
 dolphin                                                # kde file manager
 ark                                                    # kde file archiver
 unzip                                                  # extracting zip files
 # vim                                                    # terminal text editor (SKIPPED: using nvim)
 code                                                   # ide text editor
+cursor-bin                                             # Cursor code editor (AUR package)
 nwg-displays                                           # monitor management utility
 fzf                                                    # Command-line fuzzy finder
 
 # --------------------------------------------------- // Shell
-bash                                                   # bash shell
+bash                                                   # bash shell (default, always installed)
 bash-completion                                        # bash completion support
-zsh                                                    # zsh shell
-fish                                                   # fish shell
-starship|zsh                                           # customizable shell prompt written in Rust
-starship-git                                         # The cross-shell prompt for astronauts  
-starship|fish                                          # customizable shell prompt
-# oh-my-posh                                             # customizable shell prompt for bash/zsh (AUR package - installed separately)
+# Shell and prompt packages removed - user selects during installation
+# zsh                                                    # zsh shell (selected by user)
+# fish                                                   # fish shell (selected by user)
+# starship                                               # prompt tool (selected by user)
+# oh-my-posh                                             # prompt tool (selected by user, AUR package)
 
 fastfetch                                              # system information fetch tool
+bat                                                    # cat replacement with syntax highlighting
+noto-fonts-cjk                                         # CJK fonts for better Unicode support
+unimatrix                                              # matrix-style terminal animation
 
 # --------------------------------------------------- // HyDE
 hypridle                                               # idle daemon

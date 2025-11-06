@@ -12,16 +12,11 @@ setup_oh_my_posh() {
         return 1
     fi
     
-    # Create oh-my-posh themes directory in home if it doesn't exist
-    local themes_dir="$user_home/oh-my-posh/themes"
-    if [[ ! -d "$themes_dir" ]]; then
-        echo "Creating oh-my-posh themes directory..."
-        mkdir -p "$themes_dir"
-        
-        # Copy default themes if available
-        if [[ -d "/usr/share/oh-my-posh/themes" ]]; then
-            cp -r /usr/share/oh-my-posh/themes/* "$themes_dir/" 2>/dev/null || true
-        fi
+    # Check if themes directory exists (from AUR package)
+    if [[ ! -d "/usr/share/oh-my-posh/themes" ]]; then
+        echo "oh-my-posh themes not found at /usr/share/oh-my-posh/themes"
+        echo "Please ensure oh-my-posh package is properly installed"
+        return 1
     fi
     
     # Check if oh-my-posh init is already in bashrc
@@ -30,10 +25,10 @@ setup_oh_my_posh() {
         return 0
     fi
     
-    # Add oh-my-posh initialization to bashrc
+    # Add oh-my-posh initialization to bashrc using system themes location
     echo "" >> "$bashrc_file"
     echo "# oh-my-posh prompt configuration" >> "$bashrc_file"
-    echo 'eval "$(oh-my-posh init bash --config ~/oh-my-posh/themes/craver.omp.json)"' >> "$bashrc_file"
+    echo 'eval "$(oh-my-posh init bash --config /usr/share/oh-my-posh/themes/craver.omp.json)"' >> "$bashrc_file"
     
     echo "oh-my-posh configuration added to .bashrc"
     return 0

@@ -41,27 +41,8 @@ install_oh_my_posh() {
         rm -rf "$temp_dir"
     fi
     
-    # Download themes
-    local themes_dir="$HOME/oh-my-posh/themes"
-    mkdir -p "$themes_dir"
-    
-    echo "Downloading oh-my-posh themes..."
-    oh-my-posh font install --help > /dev/null 2>&1 || echo "Note: oh-my-posh font install not available, themes will be downloaded manually"
-    
-    # Download themes from GitHub
-    if command -v curl &> /dev/null; then
-        curl -s https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/releases/latest | \
-        grep "browser_download_url.*themes" | \
-        cut -d '"' -f 4 | \
-        wget -q -i - -O "$themes_dir/themes.zip"
-        
-        if [[ -f "$themes_dir/themes.zip" ]]; then
-            cd "$themes_dir"
-            unzip -q themes.zip
-            rm themes.zip
-            echo "Themes downloaded to $themes_dir"
-        fi
-    fi
+    # Themes are installed with the AUR package at /usr/share/oh-my-posh/themes
+    # No need to download themes separately
 }
 
 # Main execution
