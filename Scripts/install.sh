@@ -183,16 +183,25 @@ EOF
 
     # Shell selection with bash, zsh, fish options
     if ! chk_list "myShell" "${shlList[@]}"; then
-        print_log -c "Shell :: "
-        for i in "${!shlList[@]}"; do
-            print_log -sec "$((i + 1))" " ${shlList[$i]} "
-        done
-        prompt_timer 120 "Enter option number [default: bash] | s to skip "
+        print_log -c "Shell Selection :: "
+        print_log -sec "1" " bash (default)"
+        print_log -sec "2" " zsh"
+        print_log -sec "3" " fish"
+        prompt_timer 120 "Enter option number [default: 1] | s to skip "
 
         case "${PROMPT_INPUT}" in
-        1) export myShell="bash" ;;
-        2) export myShell="zsh" ;;
-        3) export myShell="fish" ;;
+        1|"")
+            export myShell="bash"
+            # bash is already in pkg_core.lst, no need to add
+            ;;
+        2)
+            export myShell="zsh"
+            echo "zsh" >>"${scrDir}/install_pkg.lst"
+            ;;
+        3)
+            export myShell="fish"
+            echo "fish" >>"${scrDir}/install_pkg.lst"
+            ;;
         s|S|skip|SKIP)
             print_log -sec "shell" -warn "Skipped" "Using current shell, no additional shell will be installed"
             export myShell="$(basename "$SHELL")"
@@ -203,9 +212,101 @@ EOF
             ;;
         esac
         
-        # Add to package list and report
-        echo "${myShell}" >>"${scrDir}/install_pkg.lst"
         print_log -sec "shell" -stat "selected" "${myShell}"
+    fi
+
+    # Terminal selection: Kitty (default) or Alacritty
+    if ! pkg_installed kitty && ! pkg_installed alacritty; then
+        print_log -c "Terminal Selection :: "
+        print_log -sec "1" " Kitty (default)"
+        print_log -sec "2" " Alacritty"
+        prompt_timer 120 "Enter option number [default: 1] | s to skip "
+
+        case "${PROMPT_INPUT}" in
+        1|"")
+            export myTerminal="kitty"
+            echo "kitty" >>"${scrDir}/install_pkg.lst"
+            print_log -sec "terminal" -stat "selected" "Kitty"
+            ;;
+        2)
+            export myTerminal="alacritty"
+            echo "alacritty" >>"${scrDir}/install_pkg.lst"
+            print_log -sec "terminal" -stat "selected" "Alacritty"
+            ;;
+        s|S|skip|SKIP)
+            print_log -sec "terminal" -warn "Skipped" "No terminal will be installed"
+            export myTerminal=""
+            ;;
+        *)
+            print_log -sec "terminal" -warn "Defaulting to Kitty"
+            export myTerminal="kitty"
+            echo "kitty" >>"${scrDir}/install_pkg.lst"
+            ;;
+        esac
+    elif pkg_installed kitty; then
+        export myTerminal="kitty"
+        print_log -g "[TERMINAL] " "Kitty already installed"
+    elif pkg_installed alacritty; then
+        export myTerminal="alacritty"
+        print_log -g "[TERMINAL] " "Alacritty already installed"
+    fi
+
+    # Prompt tool selection: oh-my-posh or starship
+    if ! pkg_installed oh-my-posh && ! pkg_installed starship && ! pkg_installed starship-git; then
+        print_log -c "Prompt Tool Selection :: "
+        print_log -sec "1" " oh-my-posh (default, AUR package)"
+        print_log -sec "2" " starship (AUR package)"
+        print_log -sec "3" " None (skip prompt theming)"
+        prompt_timer 120 "Enter option number [default: 1] | s to skip "
+
+        case "${PROMPT_INPUT}" in
+        1|"")
+            export myPrompt="oh-my-posh"
+            # oh-my-posh is AUR, will be handled separately
+            if chk_list "aurhlpr" "${aurList[@]}"; then
+                echo "oh-my-posh" >>"${scrDir}/install_pkg.lst"
+                print_log -sec "prompt" -stat "selected" "oh-my-posh (will install via AUR)"
+            else
+                print_log -sec "prompt" -warn "No AUR helper" "Skipping oh-my-posh installation"
+                print_log -sec "prompt" -stat "info" "Install manually later: yay -S oh-my-posh"
+            fi
+            ;;
+        2)
+            export myPrompt="starship"
+            # starship requires the selected shell
+            if [[ "${myShell}" == "zsh" ]]; then
+                echo "starship|zsh" >>"${scrDir}/install_pkg.lst"
+            elif [[ "${myShell}" == "fish" ]]; then
+                echo "starship|fish" >>"${scrDir}/install_pkg.lst"
+            else
+                # For bash, use starship-git from AUR
+                if chk_list "aurhlpr" "${aurList[@]}"; then
+                    echo "starship-git" >>"${scrDir}/install_pkg.lst"
+                else
+                    print_log -sec "prompt" -warn "No AUR helper" "Skipping starship installation"
+                    print_log -sec "prompt" -stat "info" "Install manually later: yay -S starship-git"
+                fi
+            fi
+            print_log -sec "prompt" -stat "selected" "starship"
+            ;;
+        3|s|S|skip|SKIP)
+            export myPrompt=""
+            print_log -sec "prompt" -stat "selected" "None (skipping prompt theming)"
+            ;;
+        *)
+            print_log -sec "prompt" -warn "Defaulting to oh-my-posh"
+            export myPrompt="oh-my-posh"
+            if chk_list "aurhlpr" "${aurList[@]}"; then
+                echo "oh-my-posh" >>"${scrDir}/install_pkg.lst"
+            fi
+            ;;
+        esac
+    elif pkg_installed oh-my-posh; then
+        export myPrompt="oh-my-posh"
+        print_log -g "[PROMPT] " "oh-my-posh already installed"
+    elif pkg_installed starship || pkg_installed starship-git; then
+        export myPrompt="starship"
+        print_log -g "[PROMPT] " "starship already installed"
     fi
 
     # Hyde CLI installation prompt

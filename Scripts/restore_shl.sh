@@ -26,7 +26,10 @@ if [[ "${myShell}" == "bash" ]]; then
     print_log -sec "SHELL" -stat "configuring" "bash prompt"
     if [[ ${flg_DryRun} -ne 1 ]]; then
         # shellcheck disable=SC1091
+        # Export myPrompt so bash_prompt_manager.sh can use it
+        export myPrompt
         source "${scrDir}/bash_prompt_manager.sh"
+        setup_bash_prompt "$HOME"
     else
         print_log -sec "SHELL" -stat "would configure" "bash prompt (dry run)"
     fi
