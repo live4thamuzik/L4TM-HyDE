@@ -29,6 +29,10 @@ if ! source "${scrDir}/global_fn.sh"; then
     exit 1
 fi
 
+# Source backup/restore functions from restore_cfg.sh (functions are defined at the top, before deploy_list)
+# shellcheck disable=SC1091
+source <(head -n 157 "${scrDir}/restore_cfg.sh")
+
 #------------------#
 # evaluate options #
 #------------------#
