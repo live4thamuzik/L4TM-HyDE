@@ -15,8 +15,10 @@ fi
 flg_DryRun=${flg_DryRun:-0}
 export log_section="package"
 
-"${scrDir}/install_aur.sh" "${getAur}" 2>&1
-chk_list "aurhlpr" "${aurList[@]}"
+# AUR integration removed in fork - no automatic AUR helper installation
+# If user has an AUR helper installed, it will be detected and used
+# But we don't force installation of AUR helpers
+chk_list "aurhlpr" "${aurList[@]}" || true
 listPkg="${1:-"${scrDir}/pkg_core.lst"}"
 archPkg=()
 aurhPkg=()
@@ -92,4 +94,15 @@ install_packages() {
 echo ""
 install_packages archPkg "arch" "sudo pacman"
 echo ""
-install_packages aurhPkg "aur" "${aurhlpr}"
+# Only install AUR packages if AUR helper is available (optional in fork)
+if [[ ${#aurhPkg[@]} -gt 0 ]]; then
+    if chk_list "aurhlpr" "${aurList[@]}"; then
+        install_packages aurhPkg "aur" "${aurhlpr}"
+    else
+        print_log -y "[AUR] " "Skipping AUR packages (no AUR helper installed):"
+        for pkg in "${aurhPkg[@]}"; do
+            print_log -y "  - ${pkg}"
+        done
+        print_log -sec "AUR" -stat "info" "Install AUR helper manually if needed: yay -S <package>"
+    fi
+fi

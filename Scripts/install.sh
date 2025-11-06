@@ -189,36 +189,13 @@ EOF
     #----------------#
     # get user prefs #
     #----------------#
-    echo ""
+    # AUR integration removed in fork - no automatic AUR helper installation
+    # Check if user already has an AUR helper installed (for optional packages)
     if ! chk_list "aurhlpr" "${aurList[@]}"; then
-        print_log -c "\nAUR Helpers :: "
-        aurList+=("yay-bin" "paru-bin") # Add this here instead of in global_fn.sh
-        for i in "${!aurList[@]}"; do
-            print_log -sec "$((i + 1))" " ${aurList[$i]} "
-        done
-
-        prompt_timer 120 "Enter option number [default: yay-bin] | s to skip "
-
-        case "${PROMPT_INPUT}" in
-        1) export getAur="yay" ;;
-        2) export getAur="paru" ;;
-        3) export getAur="yay-bin" ;;
-        4) export getAur="paru-bin" ;;
-        s|S|skip|SKIP)
-            print_log -sec "AUR" -warn "Skipped" "No AUR helper will be installed"
-            export getAur=""
-            ;;
-        *)
-            print_log -sec "AUR" -warn "Defaulting to yay-bin"
-            print_log -sec "AUR" -stat "default" "yay-bin"
-            export getAur="yay-bin"
-            ;;
-        esac
-        
-        # Only add to install list if user didn't skip
-        if [[ -n "$getAur" ]]; then
-            print_log -sec "AUR" -stat "selected" "${getAur}"
-        fi
+        print_log -sec "AUR" -stat "info" "No AUR helper detected (optional packages like hyde-cli-git will be skipped)"
+        print_log -sec "AUR" -stat "info" "Install manually if needed: yay -S hyde-cli-git"
+    else
+        print_log -g "[AUR] " "AUR helper detected: ${aurhlpr} (optional packages available)"
     fi
 
     # Shell selection with bash, zsh, fish options
