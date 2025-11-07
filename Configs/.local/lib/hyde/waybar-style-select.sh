@@ -369,24 +369,49 @@ set_theme_manually() {
         return 0
     fi
     
-    # Fallback: manual theme setting (waybar.py doesn't have --set-theme)
-    # Try to switch to matching layout if it exists
-    layout_file="${HOME}/.config/waybar/layouts/${theme_name}.jsonc"
-    if [ -f "${layout_file}" ]; then
-        if python3 "${WAYBAR_PY}" --set "${theme_name}" 2>/dev/null; then
-            # Layout switched via waybar.py (this will restart Waybar)
-            notify-send -a "HyDE Alert" "Waybar theme changed to: ${theme_name}"
-            return 0
-        elif [ -f "${HOME}/.config/waybar/config.jsonc" ]; then
-            # Fallback: copy layout manually
-            cp "${layout_file}" "${HOME}/.config/waybar/config.jsonc"
+    # ============================================================
+    # JOB 1: STRUCTURE - Generate config.jsonc from config.ctl
+    # ============================================================
+    # Check if theme has a config.ctl entry (MASTER SCRIPT: Structure change)
+    config_ctl="${HOME}/.config/waybar/config.ctl"
+    config_jsonc="${HOME}/.config/waybar/config.jsonc"
+    generate_script="${HOME}/.local/lib/hyde/generate-config-from-ctl.py"
+    
+    if [ -f "${config_ctl}" ] && [ -f "${generate_script}" ]; then
+        # Generate config.jsonc from config.ctl entry for this theme
+        if python3 "${generate_script}" --theme "${theme_name}" --output "${config_jsonc}" 2>/dev/null; then
+            echo "✓ Generated config.jsonc from config.ctl for theme: ${theme_name}" >&2
+        else
+            echo "⚠ No config.ctl entry for theme ${theme_name}, using current layout" >&2
         fi
     fi
     
-    # Update waybar (only if --set didn't restart it)
-    # Note: --update does NOT restart Waybar, it just updates files
-    # Waybar will reload automatically via file watcher or user can restart manually
+    # Regenerate style.css to import the new theme.css
     python3 "${WAYBAR_PY}" --update 2>/dev/null || true
+    
+    # ============================================================
+    # JOB 3: RELOAD - Force full restart of Waybar
+    # ============================================================
+    # Kill all waybar processes (like SUPER+ALT+UP/DOWN does)
+    killall waybar 2>/dev/null || true
+    sleep 0.2
+    
+    # Restart Waybar using systemd (same as waybar.py does)
+    UNIT_NAME="hyde-${XDG_SESSION_DESKTOP:-Hyprland}-bar.service"
+    if command -v hyde-shell &> /dev/null && [ -f "${HOME}/.local/bin/hyde-shell" ]; then
+        "${HOME}/.local/bin/hyde-shell" app -u "${UNIT_NAME}" -t service -- waybar 2>/dev/null || true
+    elif command -v hyde-shell &> /dev/null; then
+        hyde-shell app -u "${UNIT_NAME}" -t service -- waybar 2>/dev/null || true
+    else
+        # Fallback: use systemctl
+        systemctl --user restart "${UNIT_NAME}" 2>/dev/null || {
+            # Last resort: start waybar directly
+            waybar --config "${config_jsonc}" --style "${HOME}/.config/waybar/style.css" & disown 2>/dev/null || true
+        }
+    fi
+    
+    # Wait a moment for waybar to start and render
+    sleep 0.5
     
     notify-send -a "HyDE Alert" "Waybar theme changed to: ${theme_name}"
 }
