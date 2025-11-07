@@ -1,10 +1,9 @@
-@import "theme.css";
 
 * {
     border: none;
     border-radius: 0px;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: Roboto, "Roboto", Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
 }

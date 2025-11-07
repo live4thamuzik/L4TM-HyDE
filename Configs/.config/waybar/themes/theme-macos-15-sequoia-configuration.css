@@ -1,6 +1,6 @@
-@import "theme.css";
 
 * {
+  font-family: "SF Pro Display", "SF Mono", "JetBrains Mono Nerd Font", "JetBrainsMono Nerd Font", monospace;
   font-size: 16px;
   min-height: 0;
   border-radius: 1rem;

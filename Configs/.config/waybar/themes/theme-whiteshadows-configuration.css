@@ -1,8 +1,7 @@
-@import "theme.css";
 
 * {
     font-size:15px;
-    font-family: "CodeNewRoman Nerd Font Propo";
+    font-family: "CodeNewRoman Nerd Font Propo", "JetBrains Mono Nerd Font", "JetBrainsMono Nerd Font", monospace;
 }
 window#waybar{
     all:unset;

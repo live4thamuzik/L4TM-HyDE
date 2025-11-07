@@ -1,7 +1,7 @@
-@import "theme.css";
 
 * {
 	all: initial; /* ignore GTK theme */
+	font-family: "0xProto Nerd Font", "JetBrains Mono Nerd Font", "JetBrainsMono Nerd Font", monospace;
 }
 
 /* Note: Original theme used modular CSS files that aren't available in HyDE

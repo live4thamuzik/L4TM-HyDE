@@ -57,6 +57,11 @@ STYLE_DIRS = [
     os.path.join(str(xdg_data_home()), "waybar", "styles"),
 ]
 
+THEME_DIRS = [
+    os.path.join(str(xdg_config_home()), "waybar", "themes"),
+    os.path.join(str(xdg_data_home()), "waybar", "themes"),
+]
+
 INCLUDES_DIRS = [
     os.path.join(str(xdg_config_home()), "waybar", "includes"),
     os.path.join(str(xdg_data_home()), "waybar", "includes"),
@@ -98,6 +103,19 @@ def find_layout_files():
                 if file.endswith(".jsonc") and file not in LAYOUT_IGNORE:
                     layouts.append(os.path.join(root, file))
     return sorted(layouts)
+
+
+def find_theme_files():
+    """Recursively find all theme CSS files (theme-*.css) in the specified directories."""
+    themes = []
+    for theme_dir in THEME_DIRS:
+        if not os.path.exists(theme_dir):
+            continue
+        for root, _, files in os.walk(theme_dir):
+            for file in files:
+                if file.startswith("theme-") and file.endswith(".css"):
+                    themes.append(os.path.join(root, file))
+    return sorted(themes)
 
 
 def get_state_value(key, default=None):
@@ -244,6 +262,7 @@ def ensure_state_file():
                 file.write(f"WAYBAR_LAYOUT_PATH={current_layout}\n")
                 file.write(f"WAYBAR_LAYOUT_NAME={layout_name}\n")
                 file.write(f"WAYBAR_STYLE_PATH={style_path}\n")
+                file.write("WAYBAR_THEME_NAME=default\n")
                 logger.debug(f"Created state file with layout: {current_layout}")
             else:
                 logger.warning("No layout found to write to state file")
@@ -255,8 +274,9 @@ def ensure_state_file():
     layout_path_exists = any(line.startswith("WAYBAR_LAYOUT_PATH=") for line in lines)
     layout_name_exists = any(line.startswith("WAYBAR_LAYOUT_NAME=") for line in lines)
     style_path_exists = any(line.startswith("WAYBAR_STYLE_PATH=") for line in lines)
+    theme_name_exists = any(line.startswith("WAYBAR_THEME_NAME=") for line in lines)
 
-    if not layout_path_exists or not layout_name_exists or not style_path_exists:
+    if not layout_path_exists or not layout_name_exists or not style_path_exists or not theme_name_exists:
         logger.debug("State file is missing entries, updating it")
         current_layout = get_current_layout_from_config() if not layout_path_exists else None
         if current_layout:
@@ -273,6 +293,9 @@ def ensure_state_file():
                 if not style_path_exists:
                     file.write(f"WAYBAR_STYLE_PATH={style_path}\n")
                     logger.debug(f"Added WAYBAR_STYLE_PATH={style_path}")
+                if not theme_name_exists:
+                    file.write("WAYBAR_THEME_NAME=default\n")
+                    logger.debug("Added WAYBAR_THEME_NAME=default")
 
 
 def resolve_style_path(layout_path):
@@ -333,23 +356,25 @@ def set_layout(layout):
 
     style_filepath = os.path.join(str(xdg_config_home()), "waybar", "style.css")
     theme_filepath = os.path.join(str(xdg_config_home()), "waybar", "theme.css")
-    themes_dir = os.path.join(str(xdg_config_home()), "waybar", "themes")
     
     shutil.copyfile(layout_path, CONFIG_JSONC)
     write_style_file(style_filepath, style_path)
     
     # Check if there's a matching theme CSS file for this layout
-    # If layout name matches a theme file, apply it
+    # Only apply it if no manual theme was selected (WAYBAR_THEME_NAME != "default")
+    current_theme_name = get_current_theme()
     layout_basename = os.path.basename(layout_path).replace(".jsonc", "")
+    themes_dir = os.path.join(str(xdg_config_home()), "waybar", "themes")
     theme_css_path = os.path.join(themes_dir, f"theme-{layout_basename}.css")
     
-    if os.path.exists(theme_css_path):
-        # Apply matching theme CSS by creating symlink
-        if os.path.exists(theme_filepath) or os.path.islink(theme_filepath):
-            os.remove(theme_filepath)
-        theme_rel_path = os.path.relpath(theme_css_path, os.path.dirname(theme_filepath))
-        os.symlink(theme_rel_path, theme_filepath)
-        logger.debug(f"Applied matching theme CSS: {theme_css_path}")
+    # Only auto-apply matching theme if current theme is "default" (no manual selection)
+    if current_theme_name == "default" and os.path.exists(theme_css_path):
+        # Apply matching theme CSS
+        write_theme_css(theme_filepath, theme_css_path)
+        set_state_value("WAYBAR_THEME_NAME", layout_basename)
+        logger.debug(f"Auto-applied matching theme CSS: {theme_css_path}")
+    else:
+        logger.debug(f"Skipping auto-theme application - manual theme selection active: {current_theme_name}")
     
     update_icon_size()
     update_border_radius()
@@ -395,6 +420,193 @@ def handle_layout_navigation(option):
             return
         layout = sys.argv[2]
         set_layout(layout)
+
+
+def list_themes():
+    """List all theme CSS files with their metadata."""
+    themes = find_theme_files()
+    theme_list = []
+
+    for theme_file in themes:
+        # Extract theme name (remove "theme-" prefix and ".css" suffix)
+        basename = os.path.basename(theme_file)
+        theme_name = basename.replace("theme-", "").replace(".css", "")
+        
+        # Check for matching layout
+        matching_layout = None
+        layouts = find_layout_files()
+        for layout in layouts:
+            layout_name = os.path.basename(layout).replace(".jsonc", "")
+            if layout_name == theme_name:
+                matching_layout = layout
+                break
+
+        theme_list.append({
+            "theme": theme_file,
+            "name": theme_name,
+            "display_name": theme_name.replace("-", " ").title(),
+            "layout": matching_layout,
+        })
+
+    return theme_list
+
+
+def get_current_theme():
+    """Get the current theme name from state file."""
+    theme_name = get_state_value("WAYBAR_THEME_NAME", "default")
+    return theme_name
+
+
+def write_theme_css(theme_filepath, theme_css_path):
+    """Write theme.css file with HyDE color variables prepended if needed."""
+    # Read the theme CSS file
+    with open(theme_css_path, "r") as f:
+        theme_content = f.read()
+
+    # Check if theme file already has @define-color definitions
+    has_color_defs = "@define-color" in theme_content
+
+    # If theme doesn't have color definitions, prepend HyDE color variables
+    if not has_color_defs:
+        hyde_colors = """/* HyDE Color Variables */
+@define-color bar-bg rgba(0, 0, 0, 0);
+
+@define-color main-bg #13131D;
+@define-color main-fg #FFFFFF;
+
+@define-color wb-act-bg #6AA9C9;
+@define-color wb-act-fg #EFEFF5;
+
+@define-color wb-hvr-bg #020817;
+@define-color wb-hvr-fg #ae00f3;
+
+@define-color wb-color @main-fg;
+@define-color wb-act-color @wb-act-fg;
+@define-color wb-hvr-color @wb-hvr-fg;
+
+"""
+        theme_content = hyde_colors + theme_content
+
+    # Write to theme.css
+    with open(theme_filepath, "w") as f:
+        f.write(theme_content)
+    logger.debug(f"Wrote theme.css from {theme_css_path}")
+
+
+def set_theme(theme_name_or_path):
+    """Set the Waybar theme CSS.
+    
+    Args:
+        theme_name_or_path: Theme name (e.g., "aniks-super-waybar") or path to theme CSS file
+    """
+    theme_filepath = os.path.join(str(xdg_config_home()), "waybar", "theme.css")
+    theme_css_path = None
+
+    # Check if it's a path or a name
+    if os.path.exists(theme_name_or_path) and theme_name_or_path.endswith(".css"):
+        theme_css_path = theme_name_or_path
+        # Extract name from path
+        basename = os.path.basename(theme_css_path)
+        theme_name = basename.replace("theme-", "").replace(".css", "")
+    else:
+        # It's a theme name, find the file
+        theme_name = theme_name_or_path
+        themes = find_theme_files()
+        for theme_file in themes:
+            basename = os.path.basename(theme_file)
+            if basename == f"theme-{theme_name}.css" or theme_file.endswith(f"/{theme_name}.css"):
+                theme_css_path = theme_file
+                break
+        
+        # Special case: "default"
+        if theme_name == "default" or theme_name == "Default (HyDE)" or theme_name.lower() == "default (hyde)":
+            theme_name = "default"
+            # Create minimal default theme.css
+            default_content = """/* HyDE Default Theme */
+/* This file is managed by HyDE's theming system */
+/* Colors are defined dynamically via wallbash */
+
+@define-color bar-bg rgba(0, 0, 0, 0);
+
+@define-color main-bg #13131D;
+@define-color main-fg #FFFFFF;
+
+@define-color wb-act-bg #6AA9C9;
+@define-color wb-act-fg #EFEFF5;
+
+@define-color wb-hvr-bg #020817;
+@define-color wb-hvr-fg #ae00f3;
+
+@define-color wb-color @main-fg;
+@define-color wb-act-color @wb-act-fg;
+@define-color wb-hvr-color @wb-hvr-fg;
+"""
+            with open(theme_filepath, "w") as f:
+                f.write(default_content)
+            set_state_value("WAYBAR_THEME_NAME", "default")
+            
+            # Regenerate style.css
+            style_filepath = os.path.join(str(xdg_config_home()), "waybar", "style.css")
+            current_layout = get_current_layout_from_config()
+            if current_layout:
+                current_style_path = resolve_style_path(current_layout)
+                write_style_file(style_filepath, current_style_path)
+            
+            # Update all waybar settings
+            update_icon_size()
+            update_border_radius()
+            generate_includes()
+            update_global_css()
+            
+            logger.debug("Set theme to default")
+            # Note: restart_waybar() is called by main() when --set-theme is used
+            return True
+
+    if not theme_css_path:
+        logger.error(f"Theme not found: {theme_name}")
+        return False
+
+    # Write theme.css
+    write_theme_css(theme_filepath, theme_css_path)
+
+    # Update state
+    set_state_value("WAYBAR_THEME_NAME", theme_name)
+
+    # Optionally switch to matching layout if it exists
+    matching_layout = None
+    layouts = find_layout_files()
+    for layout in layouts:
+        layout_name = os.path.basename(layout).replace(".jsonc", "")
+        if layout_name == theme_name:
+            matching_layout = layout
+            break
+
+    if matching_layout:
+        # Switch to matching layout, but preserve manual theme selection
+        logger.debug(f"Found matching layout for theme: {matching_layout}")
+        shutil.copyfile(matching_layout, CONFIG_JSONC)
+        layout_name = os.path.basename(matching_layout).replace(".jsonc", "")
+        set_state_value("WAYBAR_LAYOUT_PATH", matching_layout)
+        set_state_value("WAYBAR_LAYOUT_NAME", layout_name)
+        # Also update WAYBAR_STYLE_PATH for the matching layout
+        style_path = resolve_style_path(matching_layout)
+        set_state_value("WAYBAR_STYLE_PATH", style_path)
+    
+    # Regenerate style.css to import the new theme.css
+    style_filepath = os.path.join(str(xdg_config_home()), "waybar", "style.css")
+    current_layout = get_current_layout_from_config()
+    if current_layout:
+        current_style_path = resolve_style_path(current_layout)
+        write_style_file(style_filepath, current_style_path)
+    
+    # Update all waybar settings
+    update_icon_size()
+    update_border_radius()
+    generate_includes()
+    update_global_css()
+    
+    logger.debug(f"Set theme to: {theme_name}")
+    return True
 
 
 def list_layouts():
@@ -445,6 +657,29 @@ def list_layouts_json():
     sys.exit(0)
 
 
+def list_themes_json():
+    """List all themes in JSON format."""
+    themes_data = list_themes()
+    themes_json = json.dumps(themes_data, indent=4)
+    print(themes_json)
+    sys.exit(0)
+
+
+def list_themes_text():
+    """List all theme names (one per line) for shell scripts."""
+    themes = list_themes()
+    for theme_data in themes:
+        print(theme_data["name"])
+    sys.exit(0)
+
+
+def get_current_theme_text():
+    """Print current theme name for shell scripts."""
+    theme_name = get_current_theme()
+    print(theme_name)
+    sys.exit(0)
+
+
 def parse_json_file(filepath):
     """Parse a JSON file and return the data."""
     with open(filepath, "r") as file:
@@ -492,6 +727,7 @@ def write_style_file(style_filepath, source_filepath):
     {wallbash_gtk_css_file_str}
 
     /* Colors and theme configuration is generated through the `theme.css` file */
+    /* theme.css is managed by waybar.py and contains the active theme CSS */
     @import "theme.css";
 
     /* Users who want to override the current style add/edit 'user-style.css' */
@@ -537,13 +773,30 @@ def run_waybar():
 def kill_waybar():
     """Kill only the current user's Waybar process."""
     """Stop Waybar systemd unit for current session desktop."""
-    subprocess.run(["systemctl", "--user", "stop", UNIT_NAME])
+    # First, kill all waybar processes to ensure clean stop
+    try:
+        subprocess.run(["killall", "waybar"], capture_output=True, timeout=2)
+    except (subprocess.TimeoutExpired, FileNotFoundError):
+        pass
+    
+    # Then stop the systemd unit
+    subprocess.run(["systemctl", "--user", "stop", UNIT_NAME], capture_output=True)
+    
+    # Wait a moment to ensure it's fully stopped
+    import time
+    time.sleep(0.2)
+    
     logger.debug(f"Stopped Waybar systemd unit: {UNIT_NAME}")
 
 
 def restart_waybar():
     """Restart Waybar systemd unit for current session desktop."""
     kill_waybar()
+    
+    # Ensure it's fully stopped before starting
+    import time
+    time.sleep(0.1)
+    
     run_waybar()
     logger.debug(f"Restarted Waybar systemd unit: {UNIT_NAME}")
 
@@ -674,6 +927,118 @@ def rofi_file_selector(
             if n == selected:
                 return f
     return None
+
+
+def theme_selector():
+    """Show all themes in rofi and apply the selected one."""
+    themes = list_themes()
+    current_theme_name = get_current_theme()
+    
+    # Build theme names list with "Default (HyDE)" option
+    theme_names = ["Default (HyDE)"]
+    theme_paths = {"Default (HyDE)": "default"}
+    
+    for theme_data in themes:
+        display_name = theme_data["display_name"]
+        theme_names.append(display_name)
+        theme_paths[display_name] = theme_data["name"]
+    
+    # Find current selection
+    current_selection = "Default (HyDE)"
+    if current_theme_name and current_theme_name != "default":
+        for theme_data in themes:
+            if theme_data["name"] == current_theme_name:
+                current_selection = theme_data["display_name"]
+                break
+    
+    # Use rofi to select
+    hyprland = HYPRLAND.HyprctlWrapper()
+    try:
+        override_string = hyprland.get_rofi_override_string()
+        rofi_pos_string = hyprland.get_rofi_pos()
+        rofi_flags = [
+            "-p",
+            "Select Waybar Theme:",
+            "-select",
+            current_selection,
+            "-theme",
+            "clipboard",
+            "-theme-str",
+            override_string,
+            "-theme-str",
+            rofi_pos_string,
+        ]
+    except (OSError, EnvironmentError):
+        rofi_flags = [
+            "-p",
+            "Select Waybar Theme:",
+            "-select",
+            current_selection,
+            "-theme",
+            "clipboard",
+        ]
+    
+    selected = rofi_dmenu(theme_names, rofi_flags)
+    
+    if selected:
+        theme_name = theme_paths.get(selected, selected.lower().replace(" ", "-"))
+        if set_theme(theme_name):
+            # set_theme() already calls all update functions, just restart and notify
+            notify.send(
+                "Waybar",
+                f"Theme changed to {selected}",
+                replace_id=9,
+            )
+            restart_waybar()
+    sys.exit(0)
+
+
+def handle_theme_navigation(option):
+    """Handle --next-theme, --prev-theme options."""
+    themes = list_themes()
+    # Add "Default (HyDE)" as first option
+    theme_list = ["default"]
+    theme_list.extend([theme["name"] for theme in themes])
+    
+    current_theme_name = get_current_theme() or "default"
+    
+    if current_theme_name not in theme_list:
+        current_theme_name = "default"
+    
+    current_index = theme_list.index(current_theme_name)
+    
+    if option == "--next-theme":
+        next_index = (current_index + 1) % len(theme_list)
+        next_theme = theme_list[next_index]
+        if set_theme(next_theme):
+            # Get display name for notification
+            if next_theme == "default":
+                display_name = "Default (HyDE)"
+            else:
+                for theme_data in themes:
+                    if theme_data["name"] == next_theme:
+                        display_name = theme_data["display_name"]
+                        break
+                else:
+                    display_name = next_theme.replace("-", " ").title()
+            notify.send("Waybar", f"Theme changed to {display_name}", replace_id=9)
+            restart_waybar()
+    elif option == "--prev-theme":
+        prev_index = (current_index - 1 + len(theme_list)) % len(theme_list)
+        prev_theme = theme_list[prev_index]
+        if set_theme(prev_theme):
+            # Get display name for notification
+            if prev_theme == "default":
+                display_name = "Default (HyDE)"
+            else:
+                for theme_data in themes:
+                    if theme_data["name"] == prev_theme:
+                        display_name = theme_data["display_name"]
+                        break
+                else:
+                    display_name = prev_theme.replace("-", " ").title()
+            notify.send("Waybar", f"Theme changed to {display_name}", replace_id=9)
+            restart_waybar()
 
 
 def style_selector(current_layout=None):
@@ -1364,6 +1729,13 @@ def main():
     parser.add_argument("--json", "-j", action="store_true", help="List all layouts in JSON format")
     parser.add_argument("--select-layout", "-L", action="store_true", help="Select a layout using rofi")
     parser.add_argument("--select-style", "-Y", action="store_true", help="Select a style using rofi")
+    parser.add_argument("--select-theme", action="store_true", help="Select a theme using rofi")
+    parser.add_argument("--set-theme", type=str, help="Set a specific theme by name")
+    parser.add_argument("--next-theme", action="store_true", help="Switch to the next theme")
+    parser.add_argument("--prev-theme", action="store_true", help="Switch to the previous theme")
+    parser.add_argument("--list-themes", action="store_true", help="List all themes (one per line)")
+    parser.add_argument("--get-current-theme", action="store_true", help="Get current theme name")
+    parser.add_argument("--themes-json", action="store_true", help="List all themes in JSON format")
     parser.add_argument("--select", "-S", action="store_true", help="Select layout and then style")
     parser.add_argument("-G", "--generate-includes", action="store_true", help="Generate includes.json file")
     parser.add_argument("--kill", "-k", action="store_true", help="Kill all Waybar instances and watcher script")
@@ -1398,6 +1770,11 @@ def main():
         generate_includes()
         update_global_css()
         logger.debug("Updating config and style...")
+        # Ensure theme.css is current (write_style_file will import it via @import)
+        current_theme_name = get_current_theme()
+        if current_theme_name and current_theme_name != "default":
+            # Re-apply current theme to ensure it's up to date
+            set_theme(current_theme_name)
     if args.update_global_css:
         update_global_css()
     if args.update_icon_size:
@@ -1414,10 +1791,35 @@ def main():
         handle_layout_navigation("--next" if args.next else "--prev" if args.prev else "--set")
     if args.json:
         list_layouts_json()
+    if args.themes_json:
+        list_themes_json()
+    if args.list_themes:
+        list_themes_text()
+    if args.get_current_theme:
+        get_current_theme_text()
     if args.select_layout:
         layout_selector()
     if args.select_style:
         style_selector()
+    if args.select_theme:
+        theme_selector()
+    if args.set_theme:
+        if set_theme(args.set_theme):
+            # set_theme() already calls all update functions, just restart and notify
+            # Get display name for notification
+            if args.set_theme == "default":
+                display_name = "Default (HyDE)"
+            else:
+                themes = list_themes()
+                display_name = args.set_theme.replace("-", " ").title()
+                for theme_data in themes:
+                    if theme_data["name"] == args.set_theme:
+                        display_name = theme_data["display_name"]
+                        break
+            notify.send("Waybar", f"Theme changed to {display_name}", replace_id=9)
+            restart_waybar()
+    if args.next_theme or args.prev_theme:
+        handle_theme_navigation("--next-theme" if args.next_theme else "--prev-theme")
     if args.select:
         select_layout_and_style()
 
