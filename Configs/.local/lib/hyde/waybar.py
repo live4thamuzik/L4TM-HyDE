@@ -573,6 +573,7 @@ def set_theme(theme_name_or_path):
     set_state_value("WAYBAR_THEME_NAME", theme_name)
 
     # Optionally switch to matching layout if it exists
+    # First check for layout files
     matching_layout = None
     layouts = find_layout_files()
     for layout in layouts:
@@ -591,6 +592,31 @@ def set_theme(theme_name_or_path):
         # Also update WAYBAR_STYLE_PATH for the matching layout
         style_path = resolve_style_path(matching_layout)
         set_state_value("WAYBAR_STYLE_PATH", style_path)
+    else:
+        # Check for config.ctl entry (theme-specific layout)
+        config_ctl_path = os.path.join(str(xdg_config_home()), "waybar", "config.ctl")
+        if os.path.exists(config_ctl_path):
+            # Find the config.ctl entry for this theme
+            with open(config_ctl_path, 'r') as f:
+                lines = f.readlines()
+            
+            theme_index = None
+            for i, line in enumerate(lines):
+                # Look for comment with theme name
+                if f"# {theme_name}" in line or f"#{theme_name}" in line:
+                    # Next line should be the config.ctl entry
+                    if i + 1 < len(lines):
+                        next_line = lines[i + 1].strip()
+                        if '|' in next_line and not next_line.startswith('#'):
+                            try:
+                                theme_index = int(next_line.split('|')[0])
+                                logger.debug(f"Found config.ctl entry for theme {theme_name} at index {theme_index}")
+                                # Generate config.jsonc from this config.ctl entry
+                                # This requires wbarstylegen.sh or similar logic
+                                # For now, just log it - the bash script will handle it
+                                break
+                            except (ValueError, IndexError):
+                                pass
     
     # Regenerate style.css to import the new theme.css
     style_filepath = os.path.join(str(xdg_config_home()), "waybar", "style.css")
