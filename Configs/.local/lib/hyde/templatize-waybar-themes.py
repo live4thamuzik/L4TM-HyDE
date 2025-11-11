@@ -119,7 +119,10 @@ def suggest_hyde_var(color_value: str, context: str = '') -> str:
             return '@wb-hvr-bg'
         return '@wb-hvr-fg'
     
-    # Replace obvious cases: black/white/transparent
+    # CONSERVATIVE APPROACH: Only replace obvious cases
+    # Leave accent colors as-is to preserve theme uniqueness
+    
+    # Only replace if it's clearly a background/text color AND it's black/white/transparent
     if 'background' in context_lower or 'bg' in context_lower:
         # Only replace pure black or very transparent
         if '#000000' in color_lower or color_lower == '#000':
@@ -136,21 +139,7 @@ def suggest_hyde_var(color_value: str, context: str = '') -> str:
                         return '@bar-bg'
                 except:
                     pass
-        # For other backgrounds (accent colors), map to wallbash
-        if '#' in color_lower:
-            try:
-                hex_val = color_lower.split('#')[1].split()[0].split(';')[0].split(',')[0]
-                if len(hex_val) <= 6:
-                    rgb = hex_to_rgb('#' + hex_val)
-                    brightness = color_brightness(rgb)
-                    if brightness < 0.3:
-                        return '@wallbash_1xa3'  # Dark accent
-                    elif brightness < 0.6:
-                        return '@wallbash_1xa5'  # Medium accent
-                    else:
-                        return '@wallbash_1xa7'  # Light accent
-            except:
-                pass
+        # Don't replace other backgrounds - they might be accent colors
         return None
     
     if 'color' in context_lower or 'fg' in context_lower:
@@ -159,21 +148,7 @@ def suggest_hyde_var(color_value: str, context: str = '') -> str:
             return '@main-fg'
         if rgba_match and '255, 255, 255' in rgba_match.group(1):
             return '@main-fg'
-        # For other colors (accent colors), map to wallbash
-        if '#' in color_lower:
-            try:
-                hex_val = color_lower.split('#')[1].split()[0].split(';')[0].split(',')[0]
-                if len(hex_val) <= 6:
-                    rgb = hex_to_rgb('#' + hex_val)
-                    brightness = color_brightness(rgb)
-                    if brightness < 0.3:
-                        return '@wallbash_1xa3'  # Dark accent
-                    elif brightness < 0.6:
-                        return '@wallbash_1xa5'  # Medium accent
-                    else:
-                        return '@wallbash_1xa7'  # Light accent
-            except:
-                pass
+        # Don't replace other colors - they might be accent colors
         return None
     
     if 'border' in context_lower:
@@ -182,42 +157,9 @@ def suggest_hyde_var(color_value: str, context: str = '') -> str:
             return '@main-fg'
         if '#ffffff' in color_lower or color_lower == '#fff':
             return '@main-fg'
-        # For accent borders, map to wallbash
-        if '#' in color_lower:
-            try:
-                hex_val = color_lower.split('#')[1].split()[0].split(';')[0].split(',')[0]
-                if len(hex_val) <= 6:
-                    rgb = hex_to_rgb('#' + hex_val)
-                    brightness = color_brightness(rgb)
-                    if brightness < 0.3:
-                        return '@wallbash_1xa3'
-                    elif brightness < 0.6:
-                        return '@wallbash_1xa5'
-                    else:
-                        return '@wallbash_1xa7'
-            except:
-                pass
         return None
     
-    # For colors in any other context (no specific property), map accent colors to wallbash
-    if '#' in color_lower:
-        try:
-            hex_val = color_lower.split('#')[1].split()[0].split(';')[0].split(',')[0]
-            if len(hex_val) <= 6:
-                rgb = hex_to_rgb('#' + hex_val)
-                brightness = color_brightness(rgb)
-                # Only map if it's clearly an accent (not black/white)
-                if brightness > 0.1 and brightness < 0.95:
-                    if brightness < 0.3:
-                        return '@wallbash_1xa3'  # Dark accent
-                    elif brightness < 0.6:
-                        return '@wallbash_1xa5'  # Medium accent
-                    else:
-                        return '@wallbash_1xa7'  # Light accent
-        except:
-            pass
-    
-    # For everything else, keep original
+    # For everything else, keep original (accent colors, etc.)
     return None  # Signal to keep original
 
 def templatize_theme_file(theme_file: Path, dry_run: bool = False) -> Dict:
