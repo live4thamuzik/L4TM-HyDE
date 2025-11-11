@@ -6,6 +6,7 @@
 *
 * =========================================================================== */
 
+@import "theme.css";
 
 /* -----------------------------------------------------------------------------
 * Base styles
@@ -14,7 +15,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: 'JetBrains Mono', 'JetBrains Mono Nerd Font', 'JetBrainsMono Nerd Font', 'Hack Nerd Font', 'Ubuntu Mono', 'UbuntuMono', monospace;
+	font-family: 'JetBrains Mono', 'Hack Nerd Font', 'UbuntuMono', monospace;
 	font-size: 14px;
 	font-weight: 600;
 	min-height: 0;

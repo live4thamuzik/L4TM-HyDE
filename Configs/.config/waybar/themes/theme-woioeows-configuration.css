@@ -1,6 +1,7 @@
+@import "theme.css";
 
 * {
-  font-family: "CaskaydiaCove Nerd Font", "Cascadia Code Nerd Font", "JetBrains Mono Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid", monospace;
+  font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
   font-size: 16px;
   border-radius: 0;
   min-height: 0;

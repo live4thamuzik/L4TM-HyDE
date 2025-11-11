@@ -92,12 +92,5 @@ bat                                                    # cat replacement with sy
 noto-fonts-cjk                                         # CJK fonts for better Unicode support
 unimatrix                                              # matrix-style terminal animation
 
-# --------------------------------------------------- // Fonts (for Waybar themes)
-ttf-hack-nerd                                          # Hack Nerd Font (for waybar themes)
-ttf-ubuntu-font-family                                 # Ubuntu fonts (for waybar themes)
-ttf-roboto                                             # Roboto font (for waybar themes)
-ttf-cascadia-code-nerd                                 # Cascadia Code Nerd Font (for waybar themes)
-# Note: ttf-martian-mono and ttf-codenewroman-nerd are AUR packages, install manually if needed
-
 # --------------------------------------------------- // HyDE
 hypridle                                               # idle daemon
