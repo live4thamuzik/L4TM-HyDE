@@ -125,7 +125,6 @@ hyde-shell wallbashtoggle.sh -m
 All HyDE themes are fully compatible:
 - Theme switching via `hyde-shell theme`
 - Wallbash color integration
-- Waybar theme support
 - Hyprland theme support
 - All theme scripts functional
 

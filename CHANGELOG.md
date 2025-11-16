@@ -4,32 +4,6 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.2] - 2025-11-05
 
-### Added
-- **Waybar Style Switcher** (`waybar-style-select.sh`)
-  - Switch between 10 pre-configured Waybar visual styles
-  - Integrated with HyDE's dynamic theming system
-  - All styles automatically adapt to current theme colors
-  - Rofi menu with optional preview images
-  - Accessible via keybind (Super+Shift+B), HyDE menu, or command
-  - 10 themes from Waybar Examples wiki:
-    - mechabar
-    - beautiful-waybar-theme
-    - cjbassis-configuration
-    - macos-15-sequoia-configuration
-    - aniks-super-waybar
-    - whiteshadows-configuration
-    - woioeows-configuration
-    - frankydolls-win10-like-configuration
-    - dn-debugs-waybar-config
-    - notscripters-configuration
-
-### Updated
-- **Waybar Configuration**
-  - Added themes directory to restore configuration system
-  - All theme CSS files use HyDE color variables
-  - Themes directory structure includes previews and presets support
-  - Integrated into HyDE menu system
-
 ### Fixed
 - Power button menu now uses correct 2x2 grid layout
 - Lock button functionality in both Waybar and SUPER+Backspace menus

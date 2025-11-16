@@ -1,6 +1,6 @@
 # L4TM-HyDE
 
-A personalized fork of [HyDE](https://github.com/HyDE-Project/HyDE) that keeps the best parts (theming system, 63 themes) while removing complexity and adding better shell/terminal support.
+A personalized fork of [HyDE](https://github.com/HyDE-Project/HyDE) that installs Hyprland configured just like the maintainer's system - minimal but complete, with full `hyde-cli` and `hyde-shell` theming support, plus all your `.dots` configurations.
 
 ## What's Different from HyDE
 
@@ -24,7 +24,6 @@ A personalized fork of [HyDE](https://github.com/HyDE-Project/HyDE) that keeps t
 - **Prompt Tools** - oh-my-posh (default for bash), starship - choice of prompt tools
 - **Configuration Preservation** - Automatically backs up and protects your custom configs
 - **Modular Hyprland** - Clean, organized config file structure
-- **Waybar Style Switcher** - 10 pre-configured visual styles with preview images
 
 ## Prerequisites
 
@@ -65,7 +64,6 @@ cd L4TM-HyDE
 - **Super + T** - Terminal
 - **Super + C** - Code editor (Cursor)
 - **Super + slash** - Keybinds help
-- **Super + Shift + B** - Waybar style selector
 
 See [KEYBINDINGS.md](KEYBINDINGS.md) for complete reference.
 
@@ -82,22 +80,13 @@ See [KEYBINDINGS.md](KEYBINDINGS.md) for complete reference.
 - **Intel** - Automatic detection and driver installation
 - **Mixed setups** - Supports systems with multiple GPUs
 
-### Waybar Style Switcher
-
-Switch between 10 different Waybar visual styles on the fly:
-
-- **Super + Shift + B** - Open style selector menu
-- **HyDE Menu** → Waybar → Select Theme Style
-- **Command**: `hyde-shell waybar-style-select --select`
-
-All styles are integrated with HyDE's dynamic theming system and automatically adapt to your current theme colors.
-
 ### Configuration Structure
 
-- **Hyprland**: `~/.config/hypr/` (modular structure)
-- **Waybar**: `~/.config/waybar/` (simple, direct)
-- **Waybar themes**: `~/.config/waybar/themes/` (10 pre-configured styles)
+- **Hyprland**: `~/.config/hypr/` (modular structure, matches maintainer's setup)
+- **Waybar**: `~/.config/waybar/` (simple, direct configuration)
+- **All `.dots`**: Complete configuration files from `Configs/` directory
 - **No auto-overwrites** - Your configs are preserved
+- **HyDE Theming**: Full `hyde-shell` and optional `hyde-cli` support with all 63 themes
 
 ## Differences Summary
 
@@ -114,11 +103,12 @@ All styles are integrated with HyDE's dynamic theming system and automatically a
 
 ## Perfect For
 
-- **Archinstall integration** - Clean, minimal setup
-- **Users who want themes without complexity**
+- **Archinstall integration** - Clean, minimal setup that matches the maintainer's system
+- **Users who want themes without complexity** - Full HyDE theming system with `hyde-shell`
 - **Bash/kitty/nvim users** (no more zsh/alacritty forcing)
 - **AMD GPU users** - Proper AMD support out of the box
 - **Custom configuration lovers** - Your configs stay yours
+- **HyDE enthusiasts** - All 63 themes, `hyde-cli` support, and complete `.dots` included
 
 ## Themes
 
@@ -177,23 +167,6 @@ Contributions welcome! Please:
 - Current HyDE maintainer: [kRHYME7](https://github.com/kRHYME7)
 - L4TM-HyDE fork and enhancements by [l4tm](https://github.com/live4thamuzik)
 - Community contributions welcome
-
-### Waybar Style Credits
-
-The 10 Waybar styles included in L4TM-HyDE are adaptations of themes from the [Waybar Examples Wiki](https://github.com/Alexays/Waybar/wiki/Examples). All styles have been adapted to work with HyDE's dynamic theming system. Original creators:
-
-1. **mechabar** - [sejjy](https://github.com/sejjy/mechabar)
-2. **beautiful-waybar-theme** - [Zilero232](https://github.com/Zilero232/arch-install-kit)
-3. **cjbassis-configuration** - [cjbassi](https://github.com/cjbassi/config)
-4. **macos-15-sequoia-configuration** - [kamlendras](https://github.com/kamlendras/waybar-macos-sequoia)
-5. **aniks-super-waybar** - [Anik200](https://github.com/Anik200/dotfiles)
-6. **whiteshadows-configuration** - [elifouts](https://github.com/elifouts/Dotfiles)
-7. **woioeows-configuration** - [woioeow](https://github.com/woioeow/hyprland-dotfiles)
-8. **frankydolls-win10-like-configuration** - [TheFrankyDoll](https://github.com/TheFrankyDoll/win10-style-waybar)
-9. **dn-debugs-waybar-config** - [DN-debug](https://github.com/DN-debug/waybar-examples)
-10. **notscripters-configuration** - [notscripter](https://gitlab.com/notscripter/dotfiles)
-
-All styles have been modified to use HyDE's color variables and integrated into the theming system. Original CSS files and configurations can be found in the respective repositories above.
 
 ## License
 

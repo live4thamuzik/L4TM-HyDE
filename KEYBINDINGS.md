@@ -96,9 +96,6 @@ This document lists all the keybindings available in L4TM-HyDE. The keybindings 
 - **Super + Alt + P** - Monitor screenshot capture
 - **Print** - All monitors screenshot capture
 
-### Waybar Customization
-- **Super + Shift + B** - Waybar style selector (switch between 10 visual styles)
-
 ### System Monitoring
 - **Ctrl + Shift + Escape** - System monitor (htop/btop)
 

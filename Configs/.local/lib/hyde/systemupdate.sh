@@ -30,14 +30,19 @@ if [ "$1" == "up" ]; then
             esac
         done <"$temp_file"
 
+        # Ensure fastfetch can read its config and execute command substitution for PNG logo
+        # Fastfetch config uses: $(find ~/.config/fastfetch/pngs/ -name "*.png" | shuf -n 1)
         command="
+        export HOME=\"\$HOME\"
+        export XDG_CONFIG_HOME=\"\${XDG_CONFIG_HOME:-\$HOME/.config}\"
+        export PATH=\"\$PATH\"
         fastfetch
         printf '[Official] %-10s\n[AUR]      %-10s\n[Flatpak]  %-10s\n' '$official' '$aur' '$flatpak'
         "${aurhlpr}" -Syu
         $fpk_exup
         read -n 1 -p 'Press any key to continue...'
         "
-        kitty --title systemupdate sh -c "${command}"
+        kitty --title systemupdate bash -c "${command}"
     else
         echo "No upgrade info found. Please run the script without parameters first."
     fi

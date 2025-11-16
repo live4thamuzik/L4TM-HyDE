@@ -1,10 +1,11 @@
 
-@define-color bar-bg   rgba(11, 26, 11, 0.0);   /* fully transparent base */
-@define-color main-bg  rgba(11, 26, 11, 0.85);  /* dark green background */
-@define-color main-fg  rgba(234, 234, 234, 0.9);/* light gray text */
+@define-color bar-bg rgba(0, 0, 0, 0);
 
-@define-color wb-act-bg rgba(58, 13, 36, 0.6);  /* wine red for active */
-@define-color wb-act-fg rgba(46, 204, 113, 1.0);/* neon green text active */
+@define-color main-bg #1e222a;
+@define-color main-fg #6272a4;
 
-@define-color wb-hvr-bg rgba(31, 61, 31, 0.6);  /* lighter green hover */
-@define-color wb-hvr-fg rgba(255, 85, 85, 0.9); /* bright red hover text */
+@define-color wb-act-bg #bd93f9;
+@define-color wb-act-fg #282a36;
+
+@define-color wb-hvr-bg #ff5555;
+@define-color wb-hvr-fg #282a36;
